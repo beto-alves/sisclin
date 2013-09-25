@@ -1,0 +1,9 @@
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\bin\Debug\SisClin2.0.exe.config
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\bin\Debug\SisClin2.0.exe
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\bin\Debug\SisClin2.0.pdb
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2.0.csprojResolveAssemblyReference.cache
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.Properties.Resources.resources
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.Login.resources
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2.0.csproj.GenerateResource.Cache
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2.0.exe
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2.0.pdb
