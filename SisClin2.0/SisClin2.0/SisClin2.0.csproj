@@ -52,6 +52,12 @@
     <Compile Include="View\CadastroFuncionarios.Designer.cs">
       <DependentUpon>CadastroFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\CadastroPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CadastroPacientes.Designer.cs">
+      <DependentUpon>CadastroPacientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     </Compile>
     <EmbeddedResource Include="View\CadastroFuncionarios.resx">
       <DependentUpon>CadastroFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CadastroPacientes.resx">
+      <DependentUpon>CadastroPacientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
