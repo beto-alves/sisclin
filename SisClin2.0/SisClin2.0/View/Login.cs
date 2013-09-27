@@ -26,5 +26,13 @@ namespace SisClin2._0.View
         {
             Application.Exit();
         }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPrincipal frmPrincipal = new FormPrincipal();
+            frmPrincipal.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -7,3 +7,9 @@ E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.Lo
 E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2.0.csproj.GenerateResource.Cache
 E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2.0.exe
 E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2.0.pdb
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.CadastroFuncionarios.resources
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.CadastroPacientes.resources
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.FormPrincipal.resources
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.frmAtestado.resources
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.ListaConsultas.resources
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.MarcaConsulta.resources
