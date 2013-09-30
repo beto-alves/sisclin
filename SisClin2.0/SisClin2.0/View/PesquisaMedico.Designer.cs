@@ -80,7 +80,8 @@
             this.Controls.Add(this.txtPesquisaMedico);
             this.Controls.Add(this.label1);
             this.Name = "PesquisaMedico";
-            this.Text = "PesquisaMedico";
+            this.ShowIcon = false;
+            this.Text = "Pesquisa Medico";
             ((System.ComponentModel.ISupportInitialize)(this.dgListaMedico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

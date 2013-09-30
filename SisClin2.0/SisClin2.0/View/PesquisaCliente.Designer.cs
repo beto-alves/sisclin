@@ -91,7 +91,8 @@
             this.Controls.Add(this.txtPesquisaPaciente);
             this.Controls.Add(this.label1);
             this.Name = "PesquisaCliente";
-            this.Text = "PesquisaCliente";
+            this.ShowIcon = false;
+            this.Text = "Pesquisa Cliente";
             ((System.ComponentModel.ISupportInitialize)(this.dgListaCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
