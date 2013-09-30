@@ -109,6 +109,24 @@
     <Compile Include="View\PesquisaAdministradores.Designer.cs">
       <DependentUpon>PesquisaAdministradores.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\PesquisaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PesquisaCliente.Designer.cs">
+      <DependentUpon>PesquisaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PesquisaMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PesquisaMedico.Designer.cs">
+      <DependentUpon>PesquisaMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PesquisaRecepcionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PesquisaRecepcionista.Designer.cs">
+      <DependentUpon>PesquisaRecepcionista.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -141,6 +159,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\PesquisaAdministradores.resx">
       <DependentUpon>PesquisaAdministradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PesquisaCliente.resx">
+      <DependentUpon>PesquisaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PesquisaMedico.resx">
+      <DependentUpon>PesquisaMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PesquisaRecepcionista.resx">
+      <DependentUpon>PesquisaRecepcionista.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
