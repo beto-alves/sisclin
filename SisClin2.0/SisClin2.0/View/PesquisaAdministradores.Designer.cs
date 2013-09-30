@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtPesquisaAdm = new System.Windows.Forms.TextBox();
             this.btnProcurar = new System.Windows.Forms.Button();
+            this.dgListaAdm = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgListaAdm)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,11 +61,21 @@
             this.btnProcurar.Text = "Pesquisar";
             this.btnProcurar.UseVisualStyleBackColor = true;
             // 
+            // dgListaAdm
+            // 
+            this.dgListaAdm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgListaAdm.Location = new System.Drawing.Point(28, 55);
+            this.dgListaAdm.Name = "dgListaAdm";
+            this.dgListaAdm.RowTemplate.Height = 24;
+            this.dgListaAdm.Size = new System.Drawing.Size(800, 378);
+            this.dgListaAdm.TabIndex = 3;
+            // 
             // PesquisaAdministradores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(977, 445);
+            this.ClientSize = new System.Drawing.Size(856, 445);
+            this.Controls.Add(this.dgListaAdm);
             this.Controls.Add(this.btnProcurar);
             this.Controls.Add(this.txtPesquisaAdm);
             this.Controls.Add(this.label1);
@@ -71,6 +83,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Pesquisa Administradores";
+            ((System.ComponentModel.ISupportInitialize)(this.dgListaAdm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,5 +94,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPesquisaAdm;
         private System.Windows.Forms.Button btnProcurar;
+        private System.Windows.Forms.DataGridView dgListaAdm;
     }
 }

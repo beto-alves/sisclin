@@ -103,6 +103,12 @@
     <Compile Include="View\MarcaConsulta.Designer.cs">
       <DependentUpon>MarcaConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\PesquisaAdministradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PesquisaAdministradores.Designer.cs">
+      <DependentUpon>PesquisaAdministradores.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\MarcaConsulta.resx">
       <DependentUpon>MarcaConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PesquisaAdministradores.resx">
+      <DependentUpon>PesquisaAdministradores.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
