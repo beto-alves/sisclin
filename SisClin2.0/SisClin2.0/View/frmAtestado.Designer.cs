@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAtestado));
             this.label1 = new System.Windows.Forms.Label();
             this.lblNomeDr = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPaciente = new System.Windows.Forms.TextBox();
-            this.btnProcurar = new System.Windows.Forms.Button();
             this.txtCid = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnProcurar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -79,15 +80,6 @@
             this.txtPaciente.Size = new System.Drawing.Size(350, 22);
             this.txtPaciente.TabIndex = 5;
             // 
-            // btnProcurar
-            // 
-            this.btnProcurar.Location = new System.Drawing.Point(452, 58);
-            this.btnProcurar.Name = "btnProcurar";
-            this.btnProcurar.Size = new System.Drawing.Size(75, 23);
-            this.btnProcurar.TabIndex = 6;
-            this.btnProcurar.Text = "Procurar";
-            this.btnProcurar.UseVisualStyleBackColor = true;
-            // 
             // txtCid
             // 
             this.txtCid.Location = new System.Drawing.Point(95, 100);
@@ -127,34 +119,61 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(451, 321);
+            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprimir.Location = new System.Drawing.Point(407, 308);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(75, 23);
-            this.btnImprimir.TabIndex = 11;
+            this.btnImprimir.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnImprimir.Size = new System.Drawing.Size(120, 40);
+            this.btnImprimir.TabIndex = 33;
             this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprimir.UseVisualStyleBackColor = true;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(370, 320);
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.Location = new System.Drawing.Point(279, 308);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 12;
+            this.btnSalvar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnSalvar.Size = new System.Drawing.Size(120, 40);
+            this.btnSalvar.TabIndex = 34;
             this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            // 
+            // btnProcurar
+            // 
+            this.btnProcurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcurar.Image = ((System.Drawing.Image)(resources.GetObject("btnProcurar.Image")));
+            this.btnProcurar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProcurar.Location = new System.Drawing.Point(452, 52);
+            this.btnProcurar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnProcurar.Name = "btnProcurar";
+            this.btnProcurar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnProcurar.Size = new System.Drawing.Size(120, 40);
+            this.btnProcurar.TabIndex = 35;
+            this.btnProcurar.Text = "Procurar";
+            this.btnProcurar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnProcurar.UseVisualStyleBackColor = true;
             // 
             // frmAtestado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 359);
-            this.Controls.Add(this.btnSalvar);
+            this.ClientSize = new System.Drawing.Size(579, 359);
             this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnProcurar);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCid);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnProcurar);
             this.Controls.Add(this.txtPaciente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblNomeDr);
@@ -173,12 +192,12 @@
         private System.Windows.Forms.Label lblNomeDr;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPaciente;
-        private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.TextBox txtCid;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnProcurar;
     }
 }

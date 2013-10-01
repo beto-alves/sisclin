@@ -16,5 +16,6 @@ namespace SisClin2._0.View
         {
             InitializeComponent();
         }
+
     }
 }
