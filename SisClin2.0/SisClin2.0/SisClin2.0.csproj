@@ -127,6 +127,12 @@
     <Compile Include="View\PesquisaRecepcionista.Designer.cs">
       <DependentUpon>PesquisaRecepcionista.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\RealizarConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RealizarConsulta.Designer.cs">
+      <DependentUpon>RealizarConsulta.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\PesquisaRecepcionista.resx">
       <DependentUpon>PesquisaRecepcionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RealizarConsulta.resx">
+      <DependentUpon>RealizarConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
