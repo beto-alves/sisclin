@@ -32,8 +32,6 @@
             this.cbxHorario = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lblMedico = new System.Windows.Forms.Label();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.btnInserir = new System.Windows.Forms.Button();
             this.btnProcurar = new System.Windows.Forms.Button();
             this.btnNovaReceita = new System.Windows.Forms.Button();
             this.btnNovoAtestado = new System.Windows.Forms.Button();
@@ -42,6 +40,8 @@
             this.textPaciente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnInserir = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbxHorario
@@ -86,33 +86,6 @@
             this.lblMedico.Size = new System.Drawing.Size(66, 24);
             this.lblMedico.TabIndex = 1013;
             this.lblMedico.Text = "label6";
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.Location = new System.Drawing.Point(177, 342);
-            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(197, 84);
-            this.btnPesquisar.TabIndex = 1012;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            // 
-            // btnInserir
-            // 
-            this.btnInserir.Enabled = false;
-            this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserir.Image = ((System.Drawing.Image)(resources.GetObject("btnInserir.Image")));
-            this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInserir.Location = new System.Drawing.Point(398, 342);
-            this.btnInserir.Margin = new System.Windows.Forms.Padding(4);
-            this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(197, 84);
-            this.btnInserir.TabIndex = 1011;
-            this.btnInserir.Text = "Inserir";
-            this.btnInserir.UseVisualStyleBackColor = true;
             // 
             // btnProcurar
             // 
@@ -199,16 +172,46 @@
             this.label1.TabIndex = 1003;
             this.label1.Text = "Médico:";
             // 
+            // btnInserir
+            // 
+            this.btnInserir.Enabled = false;
+            this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserir.Image = ((System.Drawing.Image)(resources.GetObject("btnInserir.Image")));
+            this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInserir.Location = new System.Drawing.Point(345, 319);
+            this.btnInserir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnInserir.Size = new System.Drawing.Size(160, 40);
+            this.btnInserir.TabIndex = 1017;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.UseVisualStyleBackColor = true;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
+            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPesquisar.Location = new System.Drawing.Point(177, 319);
+            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnPesquisar.Size = new System.Drawing.Size(160, 40);
+            this.btnPesquisar.TabIndex = 1016;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            // 
             // RealizarConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 435);
+            this.ClientSize = new System.Drawing.Size(962, 372);
+            this.Controls.Add(this.btnInserir);
+            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.cbxHorario);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblMedico);
-            this.Controls.Add(this.btnPesquisar);
-            this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.btnProcurar);
             this.Controls.Add(this.btnNovaReceita);
             this.Controls.Add(this.btnNovoAtestado);
@@ -230,8 +233,6 @@
         private System.Windows.Forms.ComboBox cbxHorario;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblMedico;
-        private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.Button btnInserir;
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Button btnNovaReceita;
         private System.Windows.Forms.Button btnNovoAtestado;
@@ -240,5 +241,7 @@
         private System.Windows.Forms.TextBox textPaciente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnInserir;
+        private System.Windows.Forms.Button btnPesquisar;
     }
 }
