@@ -41,7 +41,7 @@
             this.btnVisualizarConsultas = new System.Windows.Forms.Button();
             this.dgListaConsultas = new System.Windows.Forms.DataGridView();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnInserir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgListaConsultas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,35 +154,37 @@
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluir.Location = new System.Drawing.Point(300, 523);
+            this.btnExcluir.Location = new System.Drawing.Point(186, 523);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(197, 84);
-            this.btnExcluir.TabIndex = 16;
+            this.btnExcluir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnExcluir.Size = new System.Drawing.Size(160, 40);
+            this.btnExcluir.TabIndex = 39;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             // 
-            // btnSalvar
+            // btnInserir
             // 
-            this.btnSalvar.Enabled = false;
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(42, 523);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(197, 84);
-            this.btnSalvar.TabIndex = 15;
-            this.btnSalvar.Text = "Inserir";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnInserir.Enabled = false;
+            this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserir.Image = ((System.Drawing.Image)(resources.GetObject("btnInserir.Image")));
+            this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInserir.Location = new System.Drawing.Point(19, 523);
+            this.btnInserir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnInserir.Size = new System.Drawing.Size(160, 40);
+            this.btnInserir.TabIndex = 38;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.UseVisualStyleBackColor = true;
             // 
             // MarcaConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(576, 625);
+            this.ClientSize = new System.Drawing.Size(576, 573);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.dgListaConsultas);
             this.Controls.Add(this.btnVisualizarConsultas);
             this.Controls.Add(this.cbHorario);
@@ -217,6 +219,6 @@
         private System.Windows.Forms.Button btnVisualizarConsultas;
         private System.Windows.Forms.DataGridView dgListaConsultas;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnInserir;
     }
 }
