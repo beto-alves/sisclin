@@ -1,0 +1,9 @@
+E:\SegundoSemestre13\SisClin\TesteMysql\TesteMysql\bin\Debug\TesteMysql.exe.config
+E:\SegundoSemestre13\SisClin\TesteMysql\TesteMysql\bin\Debug\TesteMysql.exe
+E:\SegundoSemestre13\SisClin\TesteMysql\TesteMysql\bin\Debug\TesteMysql.pdb
+E:\SegundoSemestre13\SisClin\TesteMysql\TesteMysql\obj\Debug\TesteMysql.csprojResolveAssemblyReference.cache
+E:\SegundoSemestre13\SisClin\TesteMysql\TesteMysql\obj\Debug\TesteMysql.Form1.resources
+E:\SegundoSemestre13\SisClin\TesteMysql\TesteMysql\obj\Debug\TesteMysql.Properties.Resources.resources
+E:\SegundoSemestre13\SisClin\TesteMysql\TesteMysql\obj\Debug\TesteMysql.csproj.GenerateResource.Cache
+E:\SegundoSemestre13\SisClin\TesteMysql\TesteMysql\obj\Debug\TesteMysql.exe
+E:\SegundoSemestre13\SisClin\TesteMysql\TesteMysql\obj\Debug\TesteMysql.pdb
