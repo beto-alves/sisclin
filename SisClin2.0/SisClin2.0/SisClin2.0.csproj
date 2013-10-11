@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Connection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\CadastroFuncionarios.cs">
@@ -111,29 +112,11 @@
     <Compile Include="View\MarcaConsulta.Designer.cs">
       <DependentUpon>MarcaConsulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\PesquisaAdministradores.cs">
+    <Compile Include="View\PesquisaFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\PesquisaAdministradores.Designer.cs">
-      <DependentUpon>PesquisaAdministradores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\PesquisaCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\PesquisaCliente.Designer.cs">
-      <DependentUpon>PesquisaCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\PesquisaMedico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\PesquisaMedico.Designer.cs">
-      <DependentUpon>PesquisaMedico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\PesquisaRecepcionista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\PesquisaRecepcionista.Designer.cs">
-      <DependentUpon>PesquisaRecepcionista.cs</DependentUpon>
+    <Compile Include="View\PesquisaFuncionario.Designer.cs">
+      <DependentUpon>PesquisaFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="View\RealizarConsulta.cs">
       <SubType>Form</SubType>
@@ -147,9 +130,13 @@
     <Compile Include="View\VisReceita.Designer.cs">
       <DependentUpon>VisReceita.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vo\AgendaVO.cs" />
+    <Compile Include="Vo\AtestadoVO.cs" />
+    <Compile Include="Vo\ConsultaVO.cs" />
     <Compile Include="Vo\FuncionarioVO.cs" />
     <Compile Include="Vo\PacienteVO.cs" />
     <Compile Include="Vo\PessoaVO.cs" />
+    <Compile Include="Vo\ReceitaVO.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -183,17 +170,8 @@
     <EmbeddedResource Include="View\MarcaConsulta.resx">
       <DependentUpon>MarcaConsulta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\PesquisaAdministradores.resx">
-      <DependentUpon>PesquisaAdministradores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\PesquisaCliente.resx">
-      <DependentUpon>PesquisaCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\PesquisaMedico.resx">
-      <DependentUpon>PesquisaMedico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\PesquisaRecepcionista.resx">
-      <DependentUpon>PesquisaRecepcionista.cs</DependentUpon>
+    <EmbeddedResource Include="View\PesquisaFuncionario.resx">
+      <DependentUpon>PesquisaFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\RealizarConsulta.resx">
       <DependentUpon>RealizarConsulta.cs</DependentUpon>
@@ -216,7 +194,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
-    <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
