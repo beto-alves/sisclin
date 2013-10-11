@@ -11,5 +11,9 @@ namespace SisClin2._0.Vo
         public string funcao;
         public string horario;
         public string senha;
+        public string crm;
+        public string especializacao;
+
+        public void FuncionarioVO() { }
     }
 }

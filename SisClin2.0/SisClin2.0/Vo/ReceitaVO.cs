@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace SisClin2._0.Vo
 {
-    class PacienteVO : PessoaVO
+    class ReceitaVO
     {
-        public string foto;
-        public string profissao;
-
-        public void PacienteVO(){}
     }
 }

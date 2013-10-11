@@ -8,6 +8,7 @@ namespace SisClin2._0.Vo
 {
     class PessoaVO
     {
+        public int id;
         public string nome;
         public DateTime nascimento;
         public string rg;
@@ -22,7 +23,6 @@ namespace SisClin2._0.Vo
         public string estado;
         public string complemento;
         public int numero;
-        public int codigo;
 
         public PessoaVO() { }
 
