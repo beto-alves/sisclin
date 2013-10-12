@@ -15,7 +15,7 @@ namespace SisClin2._0.Vo
         public DateTime dataHorario;
         public string observacoes;
 
-        public void ConsultaVO() { }
+        public ConsultaVO() { }
 
     }
 }

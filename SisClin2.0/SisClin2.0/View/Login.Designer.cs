@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.lblNome = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -58,19 +58,20 @@
             this.lblSenha.TabIndex = 1;
             this.lblSenha.Text = "Senha:";
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(242, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(359, 22);
-            this.textBox1.TabIndex = 2;
+            this.txtNome.Location = new System.Drawing.Point(242, 20);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(359, 22);
+            this.txtNome.TabIndex = 2;
             // 
-            // textBox2
+            // txtSenha
             // 
-            this.textBox2.Location = new System.Drawing.Point(242, 59);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(359, 22);
-            this.textBox2.TabIndex = 3;
+            this.txtSenha.Location = new System.Drawing.Point(242, 59);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(359, 22);
+            this.txtSenha.TabIndex = 3;
+            this.txtSenha.UseSystemPasswordChar = true;
             // 
             // btnCancelar
             // 
@@ -109,8 +110,8 @@
             this.ClientSize = new System.Drawing.Size(626, 155);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.lblNome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -125,8 +126,8 @@
 
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblSenha;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEntrar;
     }

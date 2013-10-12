@@ -11,6 +11,6 @@ namespace SisClin2._0.Vo
         public string foto;
         public string profissao;
 
-        public void PacienteVO(){}
+        public PacienteVO(){}
     }
 }

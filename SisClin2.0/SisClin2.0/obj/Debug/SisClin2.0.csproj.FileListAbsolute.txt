@@ -14,9 +14,6 @@ E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.fr
 E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.ListaConsultas.resources
 E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.MarcaConsulta.resources
 E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.GerarReceita.resources
-E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.PesquisaAdministradores.resources
-E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.PesquisaCliente.resources
-E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.PesquisaMedico.resources
-E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.PesquisaRecepcionista.resources
 E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.RealizarConsulta.resources
 E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.VisReceita.resources
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.PesquisaFuncionario.resources

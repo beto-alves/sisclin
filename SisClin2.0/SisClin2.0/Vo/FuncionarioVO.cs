@@ -14,6 +14,6 @@ namespace SisClin2._0.Vo
         public string crm;
         public string especializacao;
 
-        public void FuncionarioVO() { }
+        public FuncionarioVO() { }
     }
 }
