@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SisClin2._0.Vo
 {
-    class PessoaVO
+    public class PessoaVO
     {
         public int id;
         public string nome;
@@ -22,7 +22,7 @@ namespace SisClin2._0.Vo
         public string cep;
         public string estado;
         public string complemento;
-        public int numero;
+        public string numero;
 
         public PessoaVO() { }
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SisClin2._0.Model;
+using SisClin2._0.View;
 using SisClin2._0.Vo;
 
 namespace SisClin2._0.Controller
@@ -16,8 +17,12 @@ namespace SisClin2._0.Controller
         {
             FuncionarioModel model = new FuncionarioModel();
 
-            if (model.login(funcionario))
+            FuncionarioVO funcionarioLog = model.login(funcionario);
+
+            if( funcionario.id != 0 )
             {
+                FormPrincipal frmPrincipal = new FormPrincipal(funcionarioLog);
+                frmPrincipal.ShowDialog();
                 return true;
             }
             else

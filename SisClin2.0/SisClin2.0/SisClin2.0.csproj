@@ -102,6 +102,12 @@
     <Compile Include="View\ListaConsultas.Designer.cs">
       <DependentUpon>ListaConsultas.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\PesquisaPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PesquisaPacientes.Designer.cs">
+      <DependentUpon>PesquisaPacientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ListaConsultas.resx">
       <DependentUpon>ListaConsultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PesquisaPacientes.resx">
+      <DependentUpon>PesquisaPacientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

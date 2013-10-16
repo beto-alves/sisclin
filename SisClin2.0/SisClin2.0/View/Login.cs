@@ -41,8 +41,6 @@ namespace SisClin2._0.View
             if (funcionarioController.login(funcionarioVo))
             {
                 this.Hide();
-                FormPrincipal frmPrincipal = new FormPrincipal();
-                frmPrincipal.ShowDialog();
                 this.Show();
             }
             else

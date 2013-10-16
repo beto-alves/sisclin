@@ -30,32 +30,34 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.secretáriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.marcarConsultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarConsultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarPacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pesquisarPacientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.médicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verConsultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.realizarConsultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pesquisarPacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarFuncionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listaDeFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnSecretaria = new System.Windows.Forms.ToolStripMenuItem();
+            this.smnMarcarConsulta = new System.Windows.Forms.ToolStripMenuItem();
+            this.smnListaConsulta = new System.Windows.Forms.ToolStripMenuItem();
+            this.smnCadPaciente = new System.Windows.Forms.ToolStripMenuItem();
+            this.smnPesquisaPacientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnMedico = new System.Windows.Forms.ToolStripMenuItem();
+            this.smnVerConsultas = new System.Windows.Forms.ToolStripMenuItem();
+            this.smnRealizaConsultas = new System.Windows.Forms.ToolStripMenuItem();
+            this.smnPesquisaPaciente = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnAdministrador = new System.Windows.Forms.ToolStripMenuItem();
+            this.smnCadFuncionario = new System.Windows.Forms.ToolStripMenuItem();
+            this.smnListaFuncionarios = new System.Windows.Forms.ToolStripMenuItem();
             this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.meusDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dg1 = new System.Windows.Forms.DataGridView();
+            this.smnSair = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.txtBemVindo = new System.Windows.Forms.ToolStripStatusLabel();
+            this.txtNomeUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dg1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.secretáriaToolStripMenuItem,
-            this.médicoToolStripMenuItem,
-            this.administradorToolStripMenuItem,
+            this.mnSecretaria,
+            this.mnMedico,
+            this.mnAdministrador,
             this.usuárioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -63,95 +65,102 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // secretáriaToolStripMenuItem
+            // mnSecretaria
             // 
-            this.secretáriaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.marcarConsultaToolStripMenuItem,
-            this.listarConsultaToolStripMenuItem,
-            this.cadastrarPacientesToolStripMenuItem,
-            this.pesquisarPacientesToolStripMenuItem1});
-            this.secretáriaToolStripMenuItem.Name = "secretáriaToolStripMenuItem";
-            this.secretáriaToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
-            this.secretáriaToolStripMenuItem.Text = "Secretária";
+            this.mnSecretaria.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.smnMarcarConsulta,
+            this.smnListaConsulta,
+            this.smnCadPaciente,
+            this.smnPesquisaPacientes});
+            this.mnSecretaria.Name = "mnSecretaria";
+            this.mnSecretaria.Size = new System.Drawing.Size(87, 24);
+            this.mnSecretaria.Text = "Secretária";
             // 
-            // marcarConsultaToolStripMenuItem
+            // smnMarcarConsulta
             // 
-            this.marcarConsultaToolStripMenuItem.Name = "marcarConsultaToolStripMenuItem";
-            this.marcarConsultaToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.marcarConsultaToolStripMenuItem.Text = "Marcar Consulta";
+            this.smnMarcarConsulta.Name = "smnMarcarConsulta";
+            this.smnMarcarConsulta.Size = new System.Drawing.Size(207, 24);
+            this.smnMarcarConsulta.Text = "Marcar Consulta";
+            this.smnMarcarConsulta.Click += new System.EventHandler(this.smnMarcarConsulta_Click);
             // 
-            // listarConsultaToolStripMenuItem
+            // smnListaConsulta
             // 
-            this.listarConsultaToolStripMenuItem.Name = "listarConsultaToolStripMenuItem";
-            this.listarConsultaToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.listarConsultaToolStripMenuItem.Text = "Listar Consultas";
+            this.smnListaConsulta.Name = "smnListaConsulta";
+            this.smnListaConsulta.Size = new System.Drawing.Size(207, 24);
+            this.smnListaConsulta.Text = "Listar Consultas";
+            this.smnListaConsulta.Click += new System.EventHandler(this.smnListaConsulta_Click);
             // 
-            // cadastrarPacientesToolStripMenuItem
+            // smnCadPaciente
             // 
-            this.cadastrarPacientesToolStripMenuItem.Name = "cadastrarPacientesToolStripMenuItem";
-            this.cadastrarPacientesToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
-            this.cadastrarPacientesToolStripMenuItem.Text = "Cadastrar Pacientes";
+            this.smnCadPaciente.Name = "smnCadPaciente";
+            this.smnCadPaciente.Size = new System.Drawing.Size(207, 24);
+            this.smnCadPaciente.Text = "Cadastrar Pacientes";
+            this.smnCadPaciente.Click += new System.EventHandler(this.smnCadPaciente_Click);
             // 
-            // pesquisarPacientesToolStripMenuItem1
+            // smnPesquisaPacientes
             // 
-            this.pesquisarPacientesToolStripMenuItem1.Name = "pesquisarPacientesToolStripMenuItem1";
-            this.pesquisarPacientesToolStripMenuItem1.Size = new System.Drawing.Size(207, 24);
-            this.pesquisarPacientesToolStripMenuItem1.Text = "Pesquisar Pacientes";
+            this.smnPesquisaPacientes.Name = "smnPesquisaPacientes";
+            this.smnPesquisaPacientes.Size = new System.Drawing.Size(207, 24);
+            this.smnPesquisaPacientes.Text = "Pesquisar Pacientes";
+            this.smnPesquisaPacientes.Click += new System.EventHandler(this.smnPesquisaPacientes_Click);
             // 
-            // médicoToolStripMenuItem
+            // mnMedico
             // 
-            this.médicoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verConsultasToolStripMenuItem,
-            this.realizarConsultaToolStripMenuItem,
-            this.pesquisarPacientesToolStripMenuItem});
-            this.médicoToolStripMenuItem.Name = "médicoToolStripMenuItem";
-            this.médicoToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
-            this.médicoToolStripMenuItem.Text = "Médico";
+            this.mnMedico.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.smnVerConsultas,
+            this.smnRealizaConsultas,
+            this.smnPesquisaPaciente});
+            this.mnMedico.Name = "mnMedico";
+            this.mnMedico.Size = new System.Drawing.Size(71, 24);
+            this.mnMedico.Text = "Médico";
             // 
-            // verConsultasToolStripMenuItem
+            // smnVerConsultas
             // 
-            this.verConsultasToolStripMenuItem.Name = "verConsultasToolStripMenuItem";
-            this.verConsultasToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
-            this.verConsultasToolStripMenuItem.Text = "Ver Consultas";
+            this.smnVerConsultas.Name = "smnVerConsultas";
+            this.smnVerConsultas.Size = new System.Drawing.Size(206, 24);
+            this.smnVerConsultas.Text = "Ver Agenda";
+            this.smnVerConsultas.Click += new System.EventHandler(this.smnVerConsultas_Click);
             // 
-            // realizarConsultaToolStripMenuItem
+            // smnRealizaConsultas
             // 
-            this.realizarConsultaToolStripMenuItem.Name = "realizarConsultaToolStripMenuItem";
-            this.realizarConsultaToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
-            this.realizarConsultaToolStripMenuItem.Text = "Realizar Consulta";
+            this.smnRealizaConsultas.Name = "smnRealizaConsultas";
+            this.smnRealizaConsultas.Size = new System.Drawing.Size(206, 24);
+            this.smnRealizaConsultas.Text = "Realizar Consulta";
+            this.smnRealizaConsultas.Click += new System.EventHandler(this.smnRealizaConsultas_Click);
             // 
-            // pesquisarPacientesToolStripMenuItem
+            // smnPesquisaPaciente
             // 
-            this.pesquisarPacientesToolStripMenuItem.Name = "pesquisarPacientesToolStripMenuItem";
-            this.pesquisarPacientesToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
-            this.pesquisarPacientesToolStripMenuItem.Text = "Pesquisar Pacientes";
+            this.smnPesquisaPaciente.Name = "smnPesquisaPaciente";
+            this.smnPesquisaPaciente.Size = new System.Drawing.Size(206, 24);
+            this.smnPesquisaPaciente.Text = "Pesquisar Pacientes";
+            this.smnPesquisaPaciente.Click += new System.EventHandler(this.smnPesquisaPaciente_Click);
             // 
-            // administradorToolStripMenuItem
+            // mnAdministrador
             // 
-            this.administradorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarFuncionárioToolStripMenuItem,
-            this.listaDeFuncionáriosToolStripMenuItem});
-            this.administradorToolStripMenuItem.Name = "administradorToolStripMenuItem";
-            this.administradorToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
-            this.administradorToolStripMenuItem.Text = "Administrador";
+            this.mnAdministrador.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.smnCadFuncionario,
+            this.smnListaFuncionarios});
+            this.mnAdministrador.Name = "mnAdministrador";
+            this.mnAdministrador.Size = new System.Drawing.Size(116, 24);
+            this.mnAdministrador.Text = "Administrador";
             // 
-            // cadastrarFuncionárioToolStripMenuItem
+            // smnCadFuncionario
             // 
-            this.cadastrarFuncionárioToolStripMenuItem.Name = "cadastrarFuncionárioToolStripMenuItem";
-            this.cadastrarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
-            this.cadastrarFuncionárioToolStripMenuItem.Text = "Cadastrar Funcionário";
+            this.smnCadFuncionario.Name = "smnCadFuncionario";
+            this.smnCadFuncionario.Size = new System.Drawing.Size(222, 24);
+            this.smnCadFuncionario.Text = "Cadastrar Funcionário";
             // 
-            // listaDeFuncionáriosToolStripMenuItem
+            // smnListaFuncionarios
             // 
-            this.listaDeFuncionáriosToolStripMenuItem.Name = "listaDeFuncionáriosToolStripMenuItem";
-            this.listaDeFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
-            this.listaDeFuncionáriosToolStripMenuItem.Text = "Lista de Funcionários";
+            this.smnListaFuncionarios.Name = "smnListaFuncionarios";
+            this.smnListaFuncionarios.Size = new System.Drawing.Size(222, 24);
+            this.smnListaFuncionarios.Text = "Lista de Funcionários";
             // 
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.meusDadosToolStripMenuItem,
-            this.sairToolStripMenuItem});
+            this.smnSair});
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
             this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.usuárioToolStripMenuItem.Text = "Usuário";
@@ -162,27 +171,41 @@
             this.meusDadosToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
             this.meusDadosToolStripMenuItem.Text = "Meus Dados";
             // 
-            // sairToolStripMenuItem
+            // smnSair
             // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
-            this.sairToolStripMenuItem.Text = "Sair";
+            this.smnSair.Name = "smnSair";
+            this.smnSair.Size = new System.Drawing.Size(160, 24);
+            this.smnSair.Text = "Sair";
+            this.smnSair.Click += new System.EventHandler(this.smnSair_Click);
             // 
-            // dg1
+            // statusStrip1
             // 
-            this.dg1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg1.Location = new System.Drawing.Point(12, 68);
-            this.dg1.Name = "dg1";
-            this.dg1.RowTemplate.Height = 24;
-            this.dg1.Size = new System.Drawing.Size(324, 150);
-            this.dg1.TabIndex = 1;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtBemVindo,
+            this.txtNomeUser});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 380);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(916, 25);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // txtBemVindo
+            // 
+            this.txtBemVindo.Name = "txtBemVindo";
+            this.txtBemVindo.Size = new System.Drawing.Size(96, 20);
+            this.txtBemVindo.Text = "Bem Vindo - ";
+            // 
+            // txtNomeUser
+            // 
+            this.txtNomeUser.Name = "txtNomeUser";
+            this.txtNomeUser.Size = new System.Drawing.Size(0, 20);
             // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 405);
-            this.Controls.Add(this.dg1);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -191,7 +214,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dg1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,21 +224,23 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem secretáriaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem marcarConsultaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listarConsultaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem médicoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem administradorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarPacientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pesquisarPacientesToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem verConsultasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem realizarConsultaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pesquisarPacientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarFuncionárioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listaDeFuncionáriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnSecretaria;
+        private System.Windows.Forms.ToolStripMenuItem smnMarcarConsulta;
+        private System.Windows.Forms.ToolStripMenuItem smnListaConsulta;
+        private System.Windows.Forms.ToolStripMenuItem mnMedico;
+        private System.Windows.Forms.ToolStripMenuItem mnAdministrador;
+        private System.Windows.Forms.ToolStripMenuItem smnCadPaciente;
+        private System.Windows.Forms.ToolStripMenuItem smnPesquisaPacientes;
+        private System.Windows.Forms.ToolStripMenuItem smnVerConsultas;
+        private System.Windows.Forms.ToolStripMenuItem smnRealizaConsultas;
+        private System.Windows.Forms.ToolStripMenuItem smnPesquisaPaciente;
+        private System.Windows.Forms.ToolStripMenuItem smnCadFuncionario;
+        private System.Windows.Forms.ToolStripMenuItem smnListaFuncionarios;
         private System.Windows.Forms.ToolStripMenuItem usuárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem meusDadosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dg1;
+        private System.Windows.Forms.ToolStripMenuItem smnSair;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel txtBemVindo;
+        private System.Windows.Forms.ToolStripStatusLabel txtNomeUser;
     }
 }

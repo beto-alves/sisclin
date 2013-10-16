@@ -17,3 +17,4 @@ E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.Ge
 E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.RealizarConsulta.resources
 E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.VisReceita.resources
 E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.PesquisaFuncionario.resources
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.PesquisaPacientes.resources
