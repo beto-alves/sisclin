@@ -101,5 +101,17 @@ namespace SisClin2._0.View
             objPesqusiaPacientes.ShowDialog();
         }
 
+        private void smnCadFuncionario_Click(object sender, EventArgs e)
+        {
+            CadastroFuncionarios objCadastroFuncionario = new CadastroFuncionarios();
+            objCadastroFuncionario.ShowDialog();
+        }
+
+        private void smnListaFuncionarios_Click(object sender, EventArgs e)
+        {
+            PesquisaFuncionario objPesquisaFuncionario = new PesquisaFuncionario();
+            objPesquisaFuncionario.ShowDialog();
+        }
+
     }
 }

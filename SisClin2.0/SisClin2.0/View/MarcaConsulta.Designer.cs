@@ -90,6 +90,7 @@
             this.btnProcurarPaciente.TabIndex = 8;
             this.btnProcurarPaciente.Text = "Procurar";
             this.btnProcurarPaciente.UseVisualStyleBackColor = true;
+            this.btnProcurarPaciente.Click += new System.EventHandler(this.btnProcurarPaciente_Click);
             // 
             // label3
             // 

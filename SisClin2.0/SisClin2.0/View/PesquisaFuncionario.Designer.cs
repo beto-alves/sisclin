@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgListaRecepcionista = new System.Windows.Forms.DataGridView();
+            this.dgListaFuncionarios = new System.Windows.Forms.DataGridView();
             this.btnProcurar = new System.Windows.Forms.Button();
             this.txtPesquisaRecepcionista = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgListaRecepcionista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgListaFuncionarios)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgListaRecepcionista
+            // dgListaFuncionarios
             // 
-            this.dgListaRecepcionista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgListaRecepcionista.Location = new System.Drawing.Point(25, 82);
-            this.dgListaRecepcionista.Name = "dgListaRecepcionista";
-            this.dgListaRecepcionista.RowTemplate.Height = 24;
-            this.dgListaRecepcionista.Size = new System.Drawing.Size(800, 378);
-            this.dgListaRecepcionista.TabIndex = 7;
+            this.dgListaFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgListaFuncionarios.Location = new System.Drawing.Point(25, 82);
+            this.dgListaFuncionarios.Name = "dgListaFuncionarios";
+            this.dgListaFuncionarios.RowTemplate.Height = 24;
+            this.dgListaFuncionarios.Size = new System.Drawing.Size(800, 378);
+            this.dgListaFuncionarios.TabIndex = 7;
             // 
             // btnProcurar
             // 
@@ -97,14 +97,14 @@
             this.ClientSize = new System.Drawing.Size(840, 475);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgListaRecepcionista);
+            this.Controls.Add(this.dgListaFuncionarios);
             this.Controls.Add(this.btnProcurar);
             this.Controls.Add(this.txtPesquisaRecepcionista);
             this.Controls.Add(this.label1);
             this.Name = "PesquisaFuncionario";
             this.ShowIcon = false;
             this.Text = "Pesquisa Funcionários";
-            ((System.ComponentModel.ISupportInitialize)(this.dgListaRecepcionista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgListaFuncionarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,7 +112,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgListaRecepcionista;
+        private System.Windows.Forms.DataGridView dgListaFuncionarios;
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.TextBox txtPesquisaRecepcionista;
         private System.Windows.Forms.Label label1;

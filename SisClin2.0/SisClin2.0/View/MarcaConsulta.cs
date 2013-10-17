@@ -16,5 +16,11 @@ namespace SisClin2._0.View
         {
             InitializeComponent();
         }
+
+        private void btnProcurarPaciente_Click(object sender, EventArgs e)
+        {
+            PesquisaPacientes objPesquisaPacientes = new PesquisaPacientes();
+            objPesquisaPacientes.ShowDialog();
+        }
     }
 }

@@ -32,7 +32,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnSecretaria = new System.Windows.Forms.ToolStripMenuItem();
             this.smnMarcarConsulta = new System.Windows.Forms.ToolStripMenuItem();
-            this.smnListaConsulta = new System.Windows.Forms.ToolStripMenuItem();
             this.smnCadPaciente = new System.Windows.Forms.ToolStripMenuItem();
             this.smnPesquisaPacientes = new System.Windows.Forms.ToolStripMenuItem();
             this.mnMedico = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,7 +68,6 @@
             // 
             this.mnSecretaria.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.smnMarcarConsulta,
-            this.smnListaConsulta,
             this.smnCadPaciente,
             this.smnPesquisaPacientes});
             this.mnSecretaria.Name = "mnSecretaria";
@@ -82,13 +80,6 @@
             this.smnMarcarConsulta.Size = new System.Drawing.Size(207, 24);
             this.smnMarcarConsulta.Text = "Marcar Consulta";
             this.smnMarcarConsulta.Click += new System.EventHandler(this.smnMarcarConsulta_Click);
-            // 
-            // smnListaConsulta
-            // 
-            this.smnListaConsulta.Name = "smnListaConsulta";
-            this.smnListaConsulta.Size = new System.Drawing.Size(207, 24);
-            this.smnListaConsulta.Text = "Listar Consultas";
-            this.smnListaConsulta.Click += new System.EventHandler(this.smnListaConsulta_Click);
             // 
             // smnCadPaciente
             // 
@@ -149,12 +140,14 @@
             this.smnCadFuncionario.Name = "smnCadFuncionario";
             this.smnCadFuncionario.Size = new System.Drawing.Size(222, 24);
             this.smnCadFuncionario.Text = "Cadastrar Funcionário";
+            this.smnCadFuncionario.Click += new System.EventHandler(this.smnCadFuncionario_Click);
             // 
             // smnListaFuncionarios
             // 
             this.smnListaFuncionarios.Name = "smnListaFuncionarios";
             this.smnListaFuncionarios.Size = new System.Drawing.Size(222, 24);
             this.smnListaFuncionarios.Text = "Lista de Funcionários";
+            this.smnListaFuncionarios.Click += new System.EventHandler(this.smnListaFuncionarios_Click);
             // 
             // usuárioToolStripMenuItem
             // 
@@ -226,7 +219,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mnSecretaria;
         private System.Windows.Forms.ToolStripMenuItem smnMarcarConsulta;
-        private System.Windows.Forms.ToolStripMenuItem smnListaConsulta;
         private System.Windows.Forms.ToolStripMenuItem mnMedico;
         private System.Windows.Forms.ToolStripMenuItem mnAdministrador;
         private System.Windows.Forms.ToolStripMenuItem smnCadPaciente;

@@ -31,5 +31,14 @@ namespace SisClin2._0.Controller
             }
 
         }
+
+        public List<FuncionarioVO> listarFuncionarios()
+        {
+            FuncionarioModel model = new FuncionarioModel();
+
+            List<FuncionarioVO> lista = model.listaFuncionarios();
+
+            return lista;
+        }
     }
 }
