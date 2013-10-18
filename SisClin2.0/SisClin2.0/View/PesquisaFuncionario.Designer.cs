@@ -39,9 +39,13 @@
             // 
             // dgListaFuncionarios
             // 
+            this.dgListaFuncionarios.AllowUserToAddRows = false;
+            this.dgListaFuncionarios.AllowUserToDeleteRows = false;
+            this.dgListaFuncionarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgListaFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgListaFuncionarios.Location = new System.Drawing.Point(25, 82);
             this.dgListaFuncionarios.Name = "dgListaFuncionarios";
+            this.dgListaFuncionarios.ReadOnly = true;
             this.dgListaFuncionarios.RowTemplate.Height = 24;
             this.dgListaFuncionarios.Size = new System.Drawing.Size(800, 378);
             this.dgListaFuncionarios.TabIndex = 7;

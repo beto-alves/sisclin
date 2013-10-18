@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SisClin2._0.Vo;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace SisClin2._0.Model
 {
@@ -70,10 +71,11 @@ namespace SisClin2._0.Model
  
         }
 
-        public List<FuncionarioVO> listaFuncionarios()
+        public DataTable listaFuncionarios()
         {
 
-            List<FuncionarioVO> listaFuncionarios = new List<FuncionarioVO>();
+            //List<FuncionarioVO> listaFuncionarios = new List<FuncionarioVO>();
+            DataTable dtFuncionarios = new DataTable();
 
             using (MySqlConnection conexao = DaoMySQL.getInstancia().getConexao())
             {
@@ -85,33 +87,9 @@ namespace SisClin2._0.Model
 
                     MySqlCommand mysqlCmd = new MySqlCommand(sql, conexao);
 
-                    MySqlDataReader dataReader = mysqlCmd.ExecuteReader();
+                    MySqlDataAdapter da = new MySqlDataAdapter(mysqlCmd);
 
-                    while (dataReader.Read())
-                    {
-                        FuncionarioVO funcionario = new FuncionarioVO();
-                        funcionario.id   = int.Parse(dataReader["idFuncionario"].ToString());
-                        funcionario.nome = dataReader["nome"].ToString();
-                        funcionario.nascimento = DateTime.Parse(dataReader["dataNascimento"].ToString());
-                        funcionario.cpf = dataReader["cpf"].ToString();
-                        funcionario.rg = dataReader["rg"].ToString();
-                        funcionario.telefone = dataReader["telefone"].ToString();
-                        funcionario.celular = dataReader["celular"].ToString();
-                        funcionario.email = dataReader["email"].ToString();
-                        funcionario.rua = dataReader["rua"].ToString();
-                        funcionario.bairro = dataReader["bairro"].ToString();
-                        funcionario.cidade = dataReader["cidade"].ToString();
-                        funcionario.estado = dataReader["estado"].ToString();
-                        funcionario.complemento = dataReader["complemento"].ToString();
-                        funcionario.numero = dataReader["numero"].ToString();
-                        funcionario.funcao = dataReader["funcao"].ToString();
-                        funcionario.horario = dataReader["horarioTrabalho"].ToString();
-                        funcionario.senha = dataReader["senha"].ToString();
-                        funcionario.crm = dataReader["crm"].ToString();
-                        funcionario.especializacao = dataReader["especializacao"].ToString();
-
-                        listaFuncionarios.Add(funcionario);
-                    }
+                    da.Fill(dtFuncionarios);
 
                 }
                 catch (MySqlException e)
@@ -124,7 +102,7 @@ namespace SisClin2._0.Model
                 }
             }
 
-            return listaFuncionarios;
+            return dtFuncionarios;
         }
 
     }

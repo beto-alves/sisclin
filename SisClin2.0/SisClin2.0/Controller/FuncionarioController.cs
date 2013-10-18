@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SisClin2._0.Model;
 using SisClin2._0.View;
 using SisClin2._0.Vo;
+using System.Data;
 
 namespace SisClin2._0.Controller
 {
@@ -32,13 +33,13 @@ namespace SisClin2._0.Controller
 
         }
 
-        public List<FuncionarioVO> listarFuncionarios()
+        public DataTable listarFuncionarios()
         {
             FuncionarioModel model = new FuncionarioModel();
 
-            List<FuncionarioVO> lista = model.listaFuncionarios();
+            DataTable dtFuncionarios = model.listaFuncionarios();
 
-            return lista;
+            return dtFuncionarios;
         }
     }
 }
