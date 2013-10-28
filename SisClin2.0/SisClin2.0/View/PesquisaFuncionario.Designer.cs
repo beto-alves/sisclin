@@ -49,6 +49,7 @@
             this.dgListaFuncionarios.RowTemplate.Height = 24;
             this.dgListaFuncionarios.Size = new System.Drawing.Size(800, 378);
             this.dgListaFuncionarios.TabIndex = 7;
+            this.dgListaFuncionarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListaFuncionarios_CellDoubleClick);
             // 
             // btnProcurar
             // 

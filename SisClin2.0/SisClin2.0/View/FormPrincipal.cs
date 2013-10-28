@@ -14,7 +14,7 @@ namespace SisClin2._0.View
 {
     public partial class FormPrincipal : Form
     {
-        private FuncionarioVO funcionarioVO;
+        public FuncionarioVO funcionarioVO;
 
         public FormPrincipal()
         {
@@ -31,23 +31,23 @@ namespace SisClin2._0.View
             mnMedico.Enabled = false;
             mnAdministrador.Enabled = false;
 
-            txtNomeUser.Text = this.funcionarioVO.nome;
+            txtNomeUser.Text = funcionarioVO.nome;
             this.liberaMenus();
         }
 
         private void liberaMenus()
         {
-            switch (this.funcionarioVO.funcao)
+            switch (funcionarioVO.funcao)
             {
-                case "administrador" :
+                case "Administrador" :
                      mnSecretaria.Enabled = true;
                      mnMedico.Enabled = true;
                      mnAdministrador.Enabled = true;
                 break;
-                case "secretaria" :
+                case "Secretária" :
                     mnSecretaria.Enabled = true;
                 break;
-                case "medico" :
+                case "Recepcionista" :
                     mnMedico.Enabled = true;
                 break;
             }
@@ -111,6 +111,12 @@ namespace SisClin2._0.View
         {
             PesquisaFuncionario objPesquisaFuncionario = new PesquisaFuncionario();
             objPesquisaFuncionario.ShowDialog();
+        }
+
+        private void smnMeusDados_Click(object sender, EventArgs e)
+        {
+            CadastroFuncionarios objMeusDados = new CadastroFuncionarios(funcionarioVO);
+            objMeusDados.ShowDialog();
         }
 
     }

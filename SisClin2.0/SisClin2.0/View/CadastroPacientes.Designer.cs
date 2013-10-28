@@ -37,7 +37,7 @@
             this.txtProfissao = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.txtRG = new System.Windows.Forms.MaskedTextBox();
+            this.txtRg = new System.Windows.Forms.MaskedTextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtNascimento = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.cbUf = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtComplemento = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -62,12 +62,20 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnCamera = new System.Windows.Forms.Button();
+            this.cbDispositivos = new System.Windows.Forms.ComboBox();
+            this.pbFotoPaciente = new System.Windows.Forms.PictureBox();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnInserir = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoPaciente)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -79,7 +87,7 @@
             this.groupBox1.Controls.Add(this.txtProfissao);
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.txtTelefone);
-            this.groupBox1.Controls.Add(this.txtRG);
+            this.groupBox1.Controls.Add(this.txtRg);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.txtNascimento);
             this.groupBox1.Controls.Add(this.label6);
@@ -111,7 +119,6 @@
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(168, 24);
             this.txtCelular.TabIndex = 13;
-            this.txtCelular.Text = "00000000000";
             // 
             // label8
             // 
@@ -155,13 +162,13 @@
             this.txtTelefone.Size = new System.Drawing.Size(117, 24);
             this.txtTelefone.TabIndex = 9;
             // 
-            // txtRG
+            // txtRg
             // 
-            this.txtRG.Location = new System.Drawing.Point(175, 110);
-            this.txtRG.Mask = "00,000,000-0";
-            this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(117, 24);
-            this.txtRG.TabIndex = 8;
+            this.txtRg.Location = new System.Drawing.Point(175, 110);
+            this.txtRg.Mask = "00,000,000-0";
+            this.txtRg.Name = "txtRg";
+            this.txtRg.Size = new System.Drawing.Size(117, 24);
+            this.txtRg.TabIndex = 8;
             // 
             // txtNome
             // 
@@ -240,7 +247,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.cbEstado);
+            this.groupBox2.Controls.Add(this.cbUf);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.txtComplemento);
             this.groupBox2.Controls.Add(this.label14);
@@ -262,13 +269,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endereço";
             // 
-            // cbEstado
+            // cbUf
             // 
-            this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Location = new System.Drawing.Point(870, 69);
-            this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(130, 26);
-            this.cbEstado.TabIndex = 28;
+            this.cbUf.FormattingEnabled = true;
+            this.cbUf.Location = new System.Drawing.Point(870, 69);
+            this.cbUf.Name = "cbUf";
+            this.cbUf.Size = new System.Drawing.Size(130, 26);
+            this.cbUf.TabIndex = 28;
             // 
             // label15
             // 
@@ -385,6 +392,9 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnCamera);
+            this.groupBox3.Controls.Add(this.cbDispositivos);
+            this.groupBox3.Controls.Add(this.pbFotoPaciente);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(661, 10);
             this.groupBox3.Name = "groupBox3";
@@ -392,6 +402,33 @@
             this.groupBox3.TabIndex = 33;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Foto";
+            // 
+            // btnCamera
+            // 
+            this.btnCamera.Location = new System.Drawing.Point(279, 221);
+            this.btnCamera.Name = "btnCamera";
+            this.btnCamera.Size = new System.Drawing.Size(75, 25);
+            this.btnCamera.TabIndex = 2;
+            this.btnCamera.Text = "Iniciar";
+            this.btnCamera.UseVisualStyleBackColor = true;
+            this.btnCamera.Click += new System.EventHandler(this.btnCamera_Click);
+            // 
+            // cbDispositivos
+            // 
+            this.cbDispositivos.FormattingEnabled = true;
+            this.cbDispositivos.Location = new System.Drawing.Point(7, 221);
+            this.cbDispositivos.Name = "cbDispositivos";
+            this.cbDispositivos.Size = new System.Drawing.Size(266, 26);
+            this.cbDispositivos.TabIndex = 1;
+            // 
+            // pbFotoPaciente
+            // 
+            this.pbFotoPaciente.Location = new System.Drawing.Point(6, 23);
+            this.pbFotoPaciente.Name = "pbFotoPaciente";
+            this.pbFotoPaciente.Size = new System.Drawing.Size(348, 191);
+            this.pbFotoPaciente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFotoPaciente.TabIndex = 0;
+            this.pbFotoPaciente.TabStop = false;
             // 
             // btnExcluir
             // 
@@ -437,6 +474,7 @@
             this.btnInserir.TabIndex = 35;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // btnPesquisar
             // 
@@ -453,11 +491,28 @@
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPesquisar.UseVisualStyleBackColor = true;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblStatus});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 530);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1042, 25);
+            this.statusStrip1.TabIndex = 38;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(49, 20);
+            this.lblStatus.Text = "Status";
+            // 
             // CadastroPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1042, 532);
+            this.ClientSize = new System.Drawing.Size(1042, 555);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnInserir);
@@ -468,11 +523,18 @@
             this.Name = "CadastroPacientes";
             this.ShowIcon = false;
             this.Text = "Cadastro de Pacientes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CadastroPacientes_FormClosing);
+            this.Load += new System.EventHandler(this.CadastroPacientes_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoPaciente)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -494,7 +556,7 @@
         private System.Windows.Forms.TextBox txtProfissao;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
-        private System.Windows.Forms.MaskedTextBox txtRG;
+        private System.Windows.Forms.MaskedTextBox txtRg;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.TextBox txtCidade;
@@ -508,12 +570,17 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.ComboBox cbUf;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnInserir;
         private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.PictureBox pbFotoPaciente;
+        private System.Windows.Forms.Button btnCamera;
+        private System.Windows.Forms.ComboBox cbDispositivos;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblStatus;
     }
 }

@@ -33,13 +33,37 @@ namespace SisClin2._0.Controller
 
         }
 
-        public DataTable listarFuncionarios()
+        public bool cadFuncionario(FuncionarioVO funcionario)
         {
             FuncionarioModel model = new FuncionarioModel();
 
-            DataTable dtFuncionarios = model.listaFuncionarios();
+            bool retorno = model.cadFuncionario(funcionario);
 
-            return dtFuncionarios;
+            return retorno;
+        }
+
+        public DataTable listarFuncionarios()
+        {
+            FuncionarioModel model = new FuncionarioModel();
+            return model.listaFuncionarios();
+        }
+
+        public FuncionarioVO buscaFuncionario(int codigo)
+        {
+            FuncionarioModel model = new FuncionarioModel();
+            return model.buscaFuncionario(codigo);
+        }
+
+        public bool atualizaFuncionario(FuncionarioVO funcionario)
+        {
+            FuncionarioModel model = new FuncionarioModel();
+            return model.atualizaFuncionario(funcionario);
+        }
+
+        public bool deletaFuncionario(FuncionarioVO funcionario)
+        {
+            FuncionarioModel model = new FuncionarioModel();
+            return model.deletaFuncionario(funcionario);
         }
     }
 }

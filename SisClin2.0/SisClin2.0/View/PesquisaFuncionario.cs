@@ -45,6 +45,12 @@ namespace SisClin2._0.View
             dgListaFuncionarios.Columns["cpf"].HeaderText = "CPF";
             dgListaFuncionarios.Columns["funcao"].HeaderText = "Função";
         }
+
+        private void dgListaFuncionarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Auxiliar.resultadoPesquisa = Convert.ToInt16(dgListaFuncionarios.Rows[e.RowIndex].Cells["idFuncionario"].Value);
+            Close();
+        }
         
     }
 }

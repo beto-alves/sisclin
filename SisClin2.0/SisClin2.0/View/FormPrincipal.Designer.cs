@@ -42,7 +42,7 @@
             this.smnCadFuncionario = new System.Windows.Forms.ToolStripMenuItem();
             this.smnListaFuncionarios = new System.Windows.Forms.ToolStripMenuItem();
             this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.meusDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.smnMeusDados = new System.Windows.Forms.ToolStripMenuItem();
             this.smnSair = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.txtBemVindo = new System.Windows.Forms.ToolStripStatusLabel();
@@ -152,17 +152,18 @@
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.meusDadosToolStripMenuItem,
+            this.smnMeusDados,
             this.smnSair});
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
             this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.usuárioToolStripMenuItem.Text = "Usuário";
             // 
-            // meusDadosToolStripMenuItem
+            // smnMeusDados
             // 
-            this.meusDadosToolStripMenuItem.Name = "meusDadosToolStripMenuItem";
-            this.meusDadosToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
-            this.meusDadosToolStripMenuItem.Text = "Meus Dados";
+            this.smnMeusDados.Name = "smnMeusDados";
+            this.smnMeusDados.Size = new System.Drawing.Size(160, 24);
+            this.smnMeusDados.Text = "Meus Dados";
+            this.smnMeusDados.Click += new System.EventHandler(this.smnMeusDados_Click);
             // 
             // smnSair
             // 
@@ -229,7 +230,7 @@
         private System.Windows.Forms.ToolStripMenuItem smnCadFuncionario;
         private System.Windows.Forms.ToolStripMenuItem smnListaFuncionarios;
         private System.Windows.Forms.ToolStripMenuItem usuárioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem meusDadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem smnMeusDados;
         private System.Windows.Forms.ToolStripMenuItem smnSair;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel txtBemVindo;

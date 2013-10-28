@@ -63,7 +63,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gpAdicional = new System.Windows.Forms.GroupBox();
             this.txtCRM = new System.Windows.Forms.TextBox();
             this.txtEspecializacao = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gpAdicional.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -90,10 +90,15 @@
             // cbCargo
             // 
             this.cbCargo.FormattingEnabled = true;
+            this.cbCargo.Items.AddRange(new object[] {
+            "Administrador",
+            "Médico",
+            "Recepcionista"});
             this.cbCargo.Location = new System.Drawing.Point(86, 11);
             this.cbCargo.Name = "cbCargo";
             this.cbCargo.Size = new System.Drawing.Size(121, 24);
             this.cbCargo.TabIndex = 1;
+            this.cbCargo.TextChanged += new System.EventHandler(this.habilitaGpBox);
             // 
             // groupBox1
             // 
@@ -126,7 +131,8 @@
             this.txtEmail.Location = new System.Drawing.Point(175, 190);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(408, 24);
-            this.txtEmail.TabIndex = 18;
+            this.txtEmail.TabIndex = 9;
+            this.txtEmail.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtCelular
             // 
@@ -134,7 +140,8 @@
             this.txtCelular.Mask = "(99) 00000-0000";
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(118, 24);
-            this.txtCelular.TabIndex = 17;
+            this.txtCelular.TabIndex = 8;
+            this.txtCelular.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtCpf
             // 
@@ -142,14 +149,16 @@
             this.txtCpf.Mask = "000,000,000-00";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(118, 24);
-            this.txtCpf.TabIndex = 16;
+            this.txtCpf.TabIndex = 6;
+            this.txtCpf.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtSenha
             // 
             this.txtSenha.Location = new System.Drawing.Point(465, 70);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(118, 24);
-            this.txtSenha.TabIndex = 15;
+            this.txtSenha.TabIndex = 4;
+            this.txtSenha.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtTelefone
             // 
@@ -157,7 +166,8 @@
             this.txtTelefone.Mask = "(99) 0000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(111, 24);
-            this.txtTelefone.TabIndex = 14;
+            this.txtTelefone.TabIndex = 7;
+            this.txtTelefone.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtRg
             // 
@@ -165,7 +175,8 @@
             this.txtRg.Mask = "00,000,000-0";
             this.txtRg.Name = "txtRg";
             this.txtRg.Size = new System.Drawing.Size(111, 24);
-            this.txtRg.TabIndex = 13;
+            this.txtRg.TabIndex = 5;
+            this.txtRg.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // label9
             // 
@@ -205,7 +216,8 @@
             this.txtNome.Location = new System.Drawing.Point(175, 30);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(408, 24);
-            this.txtNome.TabIndex = 9;
+            this.txtNome.TabIndex = 2;
+            this.txtNome.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtNascimento
             // 
@@ -213,8 +225,9 @@
             this.txtNascimento.Mask = "00/00/0000";
             this.txtNascimento.Name = "txtNascimento";
             this.txtNascimento.Size = new System.Drawing.Size(100, 24);
-            this.txtNascimento.TabIndex = 8;
+            this.txtNascimento.TabIndex = 3;
             this.txtNascimento.ValidatingType = typeof(System.DateTime);
+            this.txtNascimento.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // label6
             // 
@@ -298,24 +311,55 @@
             // cbUF
             // 
             this.cbUF.FormattingEnabled = true;
+            this.cbUF.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO"});
             this.cbUF.Location = new System.Drawing.Point(818, 68);
             this.cbUF.Name = "cbUF";
             this.cbUF.Size = new System.Drawing.Size(121, 26);
-            this.cbUF.TabIndex = 32;
+            this.cbUF.TabIndex = 15;
+            this.cbUF.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtComplemento
             // 
             this.txtComplemento.Location = new System.Drawing.Point(818, 30);
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(169, 24);
-            this.txtComplemento.TabIndex = 31;
+            this.txtComplemento.TabIndex = 12;
+            this.txtComplemento.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(572, 30);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(100, 24);
-            this.txtNumero.TabIndex = 30;
+            this.txtNumero.TabIndex = 11;
+            this.txtNumero.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtCep
             // 
@@ -323,7 +367,8 @@
             this.txtCep.Mask = "00000-000";
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(100, 24);
-            this.txtCep.TabIndex = 29;
+            this.txtCep.TabIndex = 14;
+            this.txtCep.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtBairro
             // 
@@ -331,20 +376,23 @@
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(223, 24);
             this.txtBairro.TabIndex = 28;
+            this.txtBairro.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtCidade
             // 
             this.txtCidade.Location = new System.Drawing.Point(175, 70);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(223, 24);
-            this.txtCidade.TabIndex = 27;
+            this.txtCidade.TabIndex = 13;
+            this.txtCidade.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtRua
             // 
             this.txtRua.Location = new System.Drawing.Point(175, 30);
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(292, 24);
-            this.txtRua.TabIndex = 26;
+            this.txtRua.TabIndex = 10;
+            this.txtRua.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // label16
             // 
@@ -423,33 +471,36 @@
             this.label10.TabIndex = 19;
             this.label10.Text = "Rua:";
             // 
-            // groupBox3
+            // gpAdicional
             // 
-            this.groupBox3.Controls.Add(this.txtCRM);
-            this.groupBox3.Controls.Add(this.txtEspecializacao);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(15, 480);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1010, 150);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Dados Complementares";
+            this.gpAdicional.Controls.Add(this.txtCRM);
+            this.gpAdicional.Controls.Add(this.txtEspecializacao);
+            this.gpAdicional.Controls.Add(this.label18);
+            this.gpAdicional.Controls.Add(this.label17);
+            this.gpAdicional.Enabled = false;
+            this.gpAdicional.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpAdicional.Location = new System.Drawing.Point(15, 480);
+            this.gpAdicional.Name = "gpAdicional";
+            this.gpAdicional.Size = new System.Drawing.Size(1010, 150);
+            this.gpAdicional.TabIndex = 4;
+            this.gpAdicional.TabStop = false;
+            this.gpAdicional.Text = "Dados Complementares";
             // 
             // txtCRM
             // 
             this.txtCRM.Location = new System.Drawing.Point(195, 71);
             this.txtCRM.Name = "txtCRM";
             this.txtCRM.Size = new System.Drawing.Size(272, 24);
-            this.txtCRM.TabIndex = 36;
+            this.txtCRM.TabIndex = 17;
+            this.txtCRM.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtEspecializacao
             // 
             this.txtEspecializacao.Location = new System.Drawing.Point(195, 31);
             this.txtEspecializacao.Name = "txtEspecializacao";
             this.txtEspecializacao.Size = new System.Drawing.Size(272, 24);
-            this.txtEspecializacao.TabIndex = 35;
+            this.txtEspecializacao.TabIndex = 16;
+            this.txtEspecializacao.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // label18
             // 
@@ -484,9 +535,10 @@
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnExcluir.Size = new System.Drawing.Size(160, 40);
-            this.btnExcluir.TabIndex = 28;
+            this.btnExcluir.TabIndex = 21;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -499,9 +551,10 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnEditar.Size = new System.Drawing.Size(160, 40);
-            this.btnEditar.TabIndex = 27;
+            this.btnEditar.TabIndex = 20;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnInserir
             // 
@@ -514,9 +567,10 @@
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnInserir.Size = new System.Drawing.Size(160, 40);
-            this.btnInserir.TabIndex = 26;
+            this.btnInserir.TabIndex = 19;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // btnPesquisar
             // 
@@ -528,10 +582,11 @@
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnPesquisar.Size = new System.Drawing.Size(160, 40);
-            this.btnPesquisar.TabIndex = 25;
+            this.btnPesquisar.TabIndex = 18;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // CadastroFuncionarios
             // 
@@ -542,7 +597,7 @@
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.btnPesquisar);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.gpAdicional);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cbCargo);
@@ -554,8 +609,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gpAdicional.ResumeLayout(false);
+            this.gpAdicional.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -597,7 +652,7 @@
         private System.Windows.Forms.TextBox txtRua;
         private System.Windows.Forms.ComboBox cbUF;
         private System.Windows.Forms.TextBox txtComplemento;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox gpAdicional;
         private System.Windows.Forms.TextBox txtCRM;
         private System.Windows.Forms.TextBox txtEspecializacao;
         private System.Windows.Forms.Label label18;

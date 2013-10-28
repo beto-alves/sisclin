@@ -10,7 +10,7 @@ namespace SisClin2._0.Vo
     {
         public int id;
         public string nome;
-        public DateTime nascimento;
+        public string nascimento;
         public string rg;
         public string cpf;
         public string telefone;
