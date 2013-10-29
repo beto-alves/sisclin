@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
 using System.IO;
+using SisClin2._0.Controller;
+using SisClin2._0.Vo;
 
 namespace SisClin2._0.View
 {
@@ -18,6 +20,8 @@ namespace SisClin2._0.View
         private bool existeDispositivo = false;
         private FilterInfoCollection dispositivosDeVideo;
         private VideoCaptureDevice fonteDeVideo;
+
+        private PacienteVO paciente = new PacienteVO();
 
         public CadastroPacientes()
         {
@@ -141,7 +145,40 @@ namespace SisClin2._0.View
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            
+            paciente.nome = txtNome.Text;
+            paciente.nascimento = txtNascimento.Text;
+            paciente.rg = txtRg.Text;
+            paciente.cpf = txtCpf.Text;
+            paciente.telefone = txtTelefone.Text;
+            paciente.celular = txtCelular.Text;
+            paciente.email = txtEmail.Text;
+            paciente.rua = txtRua.Text;
+            paciente.bairro = txtBairro.Text;
+            paciente.cidade = txtCidade.Text;
+            paciente.cep = txtCep.Text;
+            paciente.estado = cbUf.Text;
+            paciente.complemento = txtComplemento.Text;
+            paciente.numero = txtNumero.Text;
+            paciente.profissao = txtProfissao.Text;
+
+            if (!pbFotoPaciente.Image.ToString().Trim().Equals(String.Empty))
+            {
+                paciente.foto =  txtCpf.Text;
+            }
+
+            PacienteController controller = new PacienteController();
+            bool retorno = controller.cadPaciente(paciente);
+
+            if (retorno)
+            {
+                MessageBox.Show("Paciente incluído com sucesso", "Cadastro de Pacientes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limpaTela();
+            }
+            else
+            {
+                MessageBox.Show("Ocorreu algum erro", "Cadastro de Pacientes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void habilitaControles(object sender, EventArgs e)
@@ -157,6 +194,10 @@ namespace SisClin2._0.View
             {
                 btnInserir.Enabled = false;
             }
+            if (txtCpf.MaskFull)
+            {
+                btnCamera.Enabled = true;
+            }
         }
 
         public void desabilitaControles(bool altera)
@@ -169,6 +210,99 @@ namespace SisClin2._0.View
             else
             {
                 btnInserir.Enabled = btnEditar.Enabled = btnExcluir.Enabled = false;
+            }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            PesquisaPacientes pesquisaPacientes = new PesquisaPacientes(this);
+            pesquisaPacientes.ShowDialog();
+
+            int codigo = Auxiliar.resultadoPesquisa;
+
+            if (codigo != 0)
+            {
+                PacienteController controller = new PacienteController();
+                paciente = controller.buscaPaciente(codigo);
+
+                txtNome.Text = paciente.nome;
+                txtNascimento.Text = paciente.nascimento;
+                txtRg.Text = paciente.rg;
+                txtCpf.Text = paciente.cpf;
+                txtTelefone.Text = paciente.telefone;
+                txtCelular.Text = paciente.celular;
+                txtEmail.Text = paciente.email;
+                txtRua.Text = paciente.rua;
+                txtBairro.Text = paciente.bairro;
+                txtCidade.Text = paciente.cidade;
+                txtCep.Text = paciente.cep;
+                cbUf.SelectedItem = paciente.estado;
+                txtComplemento.Text = paciente.complemento;
+                txtNumero.Text = paciente.numero;
+                txtProfissao.Text = paciente.profissao;
+                pbFotoPaciente.ImageLocation = Application.StartupPath + @"\Fotos\" + paciente.foto + ".jpeg";
+                desabilitaControles(true);
+ 
+            }
+
+        }
+
+        private void limpaTela()
+        {
+            txtNome.Text = txtEmail.Text = txtNascimento.Text = txtRg.Text = txtCpf.Text = txtTelefone.Text
+            = txtCelular.Text = txtRua.Text = txtNumero.Text = txtComplemento.Text = txtCidade.Text = txtCep.Text = cbUf.Text = txtBairro.Text =  String.Empty;
+            pbFotoPaciente.Image = null;
+            desabilitaControles(false);
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            PacienteController controller = new PacienteController();
+
+            if (controller.deletaPaciente(paciente))
+            {
+                MessageBox.Show("Paciente excluído com sucesso", "Cadastro de Pacientes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limpaTela();
+            }
+            else
+            {
+                MessageBox.Show("Ocorreu algum erro", "Cadastro de Pacientes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            PacienteController controller = new PacienteController();
+
+            paciente.nome = txtNome.Text;
+            paciente.nascimento = txtNascimento.Text;
+            paciente.rg = txtRg.Text;
+            paciente.cpf = txtCpf.Text;
+            paciente.telefone = txtTelefone.Text;
+            paciente.celular = txtCelular.Text;
+            paciente.email = txtEmail.Text;
+            paciente.rua = txtRua.Text;
+            paciente.bairro = txtBairro.Text;
+            paciente.cidade = txtCidade.Text;
+            paciente.cep = txtCep.Text;
+            paciente.estado = cbUf.Text;
+            paciente.complemento = txtComplemento.Text;
+            paciente.numero = txtNumero.Text;
+            paciente.profissao = txtProfissao.Text;
+
+            if (!pbFotoPaciente.Image.ToString().Trim().Equals(String.Empty))
+            {
+                paciente.foto = txtCpf.Text;
+            }
+
+            if (controller.atualizaPaciente(paciente))
+            {
+                MessageBox.Show("Paciente atualizado com sucesso", "Cadastro de Pacientes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limpaTela();
+            }
+            else
+            {
+                MessageBox.Show("Ocorreu algum erro", "Cadastro de Pacientes", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         

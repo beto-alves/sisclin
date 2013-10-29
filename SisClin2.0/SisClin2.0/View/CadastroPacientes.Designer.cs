@@ -110,7 +110,8 @@
             this.txtCpf.Mask = "000,000,000,00";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(168, 24);
-            this.txtCpf.TabIndex = 14;
+            this.txtCpf.TabIndex = 4;
+            this.txtCpf.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtCelular
             // 
@@ -118,7 +119,8 @@
             this.txtCelular.Mask = "(00) 00000-0000";
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(168, 24);
-            this.txtCelular.TabIndex = 13;
+            this.txtCelular.TabIndex = 6;
+            this.txtCelular.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // label8
             // 
@@ -145,14 +147,16 @@
             this.txtProfissao.Location = new System.Drawing.Point(175, 230);
             this.txtProfissao.Name = "txtProfissao";
             this.txtProfissao.Size = new System.Drawing.Size(450, 24);
-            this.txtProfissao.TabIndex = 11;
+            this.txtProfissao.TabIndex = 8;
+            this.txtProfissao.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(175, 190);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(450, 24);
-            this.txtEmail.TabIndex = 10;
+            this.txtEmail.TabIndex = 7;
+            this.txtEmail.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtTelefone
             // 
@@ -160,7 +164,8 @@
             this.txtTelefone.Mask = "(00) 0000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(117, 24);
-            this.txtTelefone.TabIndex = 9;
+            this.txtTelefone.TabIndex = 5;
+            this.txtTelefone.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtRg
             // 
@@ -168,14 +173,16 @@
             this.txtRg.Mask = "00,000,000-0";
             this.txtRg.Name = "txtRg";
             this.txtRg.Size = new System.Drawing.Size(117, 24);
-            this.txtRg.TabIndex = 8;
+            this.txtRg.TabIndex = 3;
+            this.txtRg.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(175, 30);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(450, 24);
-            this.txtNome.TabIndex = 7;
+            this.txtNome.TabIndex = 1;
+            this.txtNome.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtNascimento
             // 
@@ -183,7 +190,8 @@
             this.txtNascimento.Mask = "00/00/0000";
             this.txtNascimento.Name = "txtNascimento";
             this.txtNascimento.Size = new System.Drawing.Size(100, 24);
-            this.txtNascimento.TabIndex = 6;
+            this.txtNascimento.TabIndex = 2;
+            this.txtNascimento.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // label6
             // 
@@ -272,10 +280,39 @@
             // cbUf
             // 
             this.cbUf.FormattingEnabled = true;
+            this.cbUf.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO"});
             this.cbUf.Location = new System.Drawing.Point(870, 69);
             this.cbUf.Name = "cbUf";
             this.cbUf.Size = new System.Drawing.Size(130, 26);
-            this.cbUf.TabIndex = 28;
+            this.cbUf.TabIndex = 14;
+            this.cbUf.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // label15
             // 
@@ -292,7 +329,8 @@
             this.txtComplemento.Location = new System.Drawing.Point(870, 30);
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(130, 24);
-            this.txtComplemento.TabIndex = 26;
+            this.txtComplemento.TabIndex = 11;
+            this.txtComplemento.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // label14
             // 
@@ -310,7 +348,8 @@
             this.txtCep.Mask = "00000-000";
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(100, 24);
-            this.txtCep.TabIndex = 24;
+            this.txtCep.TabIndex = 13;
+            this.txtCep.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // label13
             // 
@@ -327,7 +366,8 @@
             this.txtNumero.Location = new System.Drawing.Point(600, 30);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(100, 24);
-            this.txtNumero.TabIndex = 22;
+            this.txtNumero.TabIndex = 10;
+            this.txtNumero.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // label12
             // 
@@ -344,21 +384,24 @@
             this.txtBairro.Location = new System.Drawing.Point(175, 110);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(310, 24);
-            this.txtBairro.TabIndex = 20;
+            this.txtBairro.TabIndex = 15;
+            this.txtBairro.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtCidade
             // 
             this.txtCidade.Location = new System.Drawing.Point(175, 70);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(310, 24);
-            this.txtCidade.TabIndex = 19;
+            this.txtCidade.TabIndex = 12;
+            this.txtCidade.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // txtRua
             // 
             this.txtRua.Location = new System.Drawing.Point(175, 30);
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(345, 24);
-            this.txtRua.TabIndex = 18;
+            this.txtRua.TabIndex = 9;
+            this.txtRua.TextChanged += new System.EventHandler(this.habilitaControles);
             // 
             // label11
             // 
@@ -405,7 +448,8 @@
             // 
             // btnCamera
             // 
-            this.btnCamera.Location = new System.Drawing.Point(279, 221);
+            this.btnCamera.Enabled = false;
+            this.btnCamera.Location = new System.Drawing.Point(278, 230);
             this.btnCamera.Name = "btnCamera";
             this.btnCamera.Size = new System.Drawing.Size(75, 25);
             this.btnCamera.TabIndex = 2;
@@ -416,7 +460,7 @@
             // cbDispositivos
             // 
             this.cbDispositivos.FormattingEnabled = true;
-            this.cbDispositivos.Location = new System.Drawing.Point(7, 221);
+            this.cbDispositivos.Location = new System.Drawing.Point(6, 230);
             this.cbDispositivos.Name = "cbDispositivos";
             this.cbDispositivos.Size = new System.Drawing.Size(266, 26);
             this.cbDispositivos.TabIndex = 1;
@@ -425,7 +469,7 @@
             // 
             this.pbFotoPaciente.Location = new System.Drawing.Point(6, 23);
             this.pbFotoPaciente.Name = "pbFotoPaciente";
-            this.pbFotoPaciente.Size = new System.Drawing.Size(348, 191);
+            this.pbFotoPaciente.Size = new System.Drawing.Size(348, 201);
             this.pbFotoPaciente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbFotoPaciente.TabIndex = 0;
             this.pbFotoPaciente.TabStop = false;
@@ -441,9 +485,10 @@
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnExcluir.Size = new System.Drawing.Size(160, 40);
-            this.btnExcluir.TabIndex = 37;
+            this.btnExcluir.TabIndex = 19;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -456,9 +501,10 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnEditar.Size = new System.Drawing.Size(160, 40);
-            this.btnEditar.TabIndex = 36;
+            this.btnEditar.TabIndex = 18;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnInserir
             // 
@@ -471,7 +517,7 @@
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnInserir.Size = new System.Drawing.Size(160, 40);
-            this.btnInserir.TabIndex = 35;
+            this.btnInserir.TabIndex = 17;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
@@ -486,10 +532,11 @@
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnPesquisar.Size = new System.Drawing.Size(160, 40);
-            this.btnPesquisar.TabIndex = 34;
+            this.btnPesquisar.TabIndex = 16;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // statusStrip1
             // 

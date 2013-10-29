@@ -10,9 +10,9 @@ namespace SisClin2._0.Vo
     {
 
         public int idConsulta;
-        public int idPaciente;
-        public int idMedico;
-        public DateTime dataHorario;
+        public PacienteVO paciente;
+        public FuncionarioVO medico;
+        public string dataHorario;
         public string observacoes;
 
         public ConsultaVO() { }

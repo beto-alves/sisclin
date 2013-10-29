@@ -68,7 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Auxiliar.cs" />
+    <Compile Include="Controller\ConsultaController.cs" />
     <Compile Include="Controller\FuncionarioController.cs" />
+    <Compile Include="Controller\PacienteController.cs" />
+    <Compile Include="Model\ConsultaModel.cs" />
     <Compile Include="Model\DaoMySQL.cs" />
     <Compile Include="Model\FuncionarioModel.cs" />
     <Compile Include="Model\PacienteModel.cs" />
@@ -109,6 +112,12 @@
     </Compile>
     <Compile Include="View\ListaConsultas.Designer.cs">
       <DependentUpon>ListaConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PerfilPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PerfilPaciente.Designer.cs">
+      <DependentUpon>PerfilPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="View\PesquisaPacientes.cs">
       <SubType>Form</SubType>
@@ -179,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ListaConsultas.resx">
       <DependentUpon>ListaConsultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PerfilPaciente.resx">
+      <DependentUpon>PerfilPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PesquisaPacientes.resx">
       <DependentUpon>PesquisaPacientes.cs</DependentUpon>

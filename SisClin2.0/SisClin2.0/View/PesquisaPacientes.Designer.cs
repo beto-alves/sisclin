@@ -40,11 +40,12 @@
             this.dgPesquisaPaciente.AllowUserToAddRows = false;
             this.dgPesquisaPaciente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgPesquisaPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPesquisaPaciente.Location = new System.Drawing.Point(16, 42);
+            this.dgPesquisaPaciente.Location = new System.Drawing.Point(13, 39);
             this.dgPesquisaPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.dgPesquisaPaciente.Name = "dgPesquisaPaciente";
             this.dgPesquisaPaciente.Size = new System.Drawing.Size(707, 350);
             this.dgPesquisaPaciente.TabIndex = 6;
+            this.dgPesquisaPaciente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPesquisaPaciente_CellDoubleClick);
             // 
             // txtPesquisaPaciente
             // 
@@ -73,7 +74,7 @@
             this.btnProcurar.Text = "Pesquisar";
             this.btnProcurar.UseVisualStyleBackColor = true;
             // 
-            // ListaPacientes
+            // PesquisaPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,7 +85,7 @@
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ListaPacientes";
+            this.Name = "PesquisaPacientes";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Lista Pacientes";

@@ -138,6 +138,30 @@ namespace SisClin2._0.Model
             return dtFuncionarios;
         }
 
+        public List<FuncionarioVO> listarMedicos()
+        {
+            using (MySqlConnection conexao = DaoMySQL.getInstancia().getConexao())
+            {
+                try
+                {
+                    conexao.Open();
+
+                    string sql = "SELECT * FROM funcionario WHERE `funcao` = 'Médico'";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, conexao);
+
+                }
+                catch (MySqlException e)
+                {
+                    MessageBox.Show("Erro no acesso ao mysql " + e.Message, "Erro");
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+            }
+        }
+
         public FuncionarioVO buscaFuncionario(int codigo)
         {
             FuncionarioVO funcionario = new FuncionarioVO();

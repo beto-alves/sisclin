@@ -78,7 +78,7 @@ namespace SisClin2._0.View
 
         private void smnPesquisaPacientes_Click(object sender, EventArgs e)
         {
-            PesquisaPacientes objPesquisaPacientes = new PesquisaPacientes();
+            PesquisaPacientes objPesquisaPacientes = new PesquisaPacientes(this);
             objPesquisaPacientes.ShowDialog();
         }
 
@@ -97,7 +97,7 @@ namespace SisClin2._0.View
 
         private void smnPesquisaPaciente_Click(object sender, EventArgs e)
         {
-            PesquisaPacientes objPesqusiaPacientes = new PesquisaPacientes();
+            PesquisaPacientes objPesqusiaPacientes = new PesquisaPacientes(this);
             objPesqusiaPacientes.ShowDialog();
         }
 
