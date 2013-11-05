@@ -58,10 +58,10 @@ namespace SisClin2._0.View
             Auxiliar.resultadoPesquisa = Convert.ToInt16(dgPesquisaPaciente.Rows[e.RowIndex].Cells["idPaciente"].Value);
 
             if (this.formOrigem.Name == "FormPrincipal")
-            {
+            {                
+                Close();
                 PerfilPaciente perfilPaciente = new PerfilPaciente();
                 perfilPaciente.ShowDialog();
-                Close();
             }
             else if (this.formOrigem.Name == "CadastroPacientes")
             {
@@ -71,6 +71,7 @@ namespace SisClin2._0.View
             {
                 Close();
             }
+            
         }
     }
 }

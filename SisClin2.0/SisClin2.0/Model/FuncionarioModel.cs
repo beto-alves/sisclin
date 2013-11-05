@@ -140,6 +140,8 @@ namespace SisClin2._0.Model
 
         public List<FuncionarioVO> listarMedicos()
         {
+            List<FuncionarioVO> listaMedicos = new List<FuncionarioVO>();
+           
             using (MySqlConnection conexao = DaoMySQL.getInstancia().getConexao())
             {
                 try
@@ -149,7 +151,42 @@ namespace SisClin2._0.Model
                     string sql = "SELECT * FROM funcionario WHERE `funcao` = 'Médico'";
 
                     MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                    MySqlDataReader reader = cmd.ExecuteReader();
 
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            FuncionarioVO funcionario = new FuncionarioVO();
+                            
+                            funcionario.id = Int16.Parse(reader["idFuncionario"].ToString());
+                            funcionario.nome = reader["nome"].ToString();
+                            funcionario.nascimento = reader["dataNascimento"].ToString();
+                            funcionario.cpf = reader["cpf"].ToString();
+                            funcionario.rg = reader["rg"].ToString();
+                            funcionario.telefone = reader["telefone"].ToString();
+                            funcionario.celular = reader["celular"].ToString();
+                            funcionario.email = reader["email"].ToString();
+                            funcionario.rua = reader["rua"].ToString();
+                            funcionario.bairro = reader["bairro"].ToString();
+                            funcionario.cidade = reader["cidade"].ToString();
+                            funcionario.cep = reader["cep"].ToString();
+                            funcionario.estado = reader["estado"].ToString();
+                            funcionario.complemento = reader["complemento"].ToString();
+                            funcionario.numero = reader["numero"].ToString();
+                            funcionario.funcao = reader["funcao"].ToString();
+                            funcionario.horario = reader["horarioTrabalho"].ToString();
+                            funcionario.senha = reader["senha"].ToString();
+                            funcionario.crm = reader["crm"].ToString();
+                            funcionario.especializacao = reader["especializacao"].ToString();
+
+                            listaMedicos.Add(funcionario);
+                            //reader.NextResult();
+                        }
+                        return listaMedicos;
+                    }
+
+                    
                 }
                 catch (MySqlException e)
                 {
@@ -159,7 +196,9 @@ namespace SisClin2._0.Model
                 {
                     conexao.Close();
                 }
+
             }
+            return listaMedicos;
         }
 
         public FuncionarioVO buscaFuncionario(int codigo)

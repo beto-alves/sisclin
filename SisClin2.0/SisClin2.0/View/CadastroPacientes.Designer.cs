@@ -520,7 +520,7 @@
             this.btnInserir.TabIndex = 17;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
-            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
+            this.btnInserir.Click += new System.EventHandler(this.pacienteExiste);
             // 
             // btnPesquisar
             // 

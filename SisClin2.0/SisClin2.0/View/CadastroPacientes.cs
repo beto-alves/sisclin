@@ -143,7 +143,22 @@ namespace SisClin2._0.View
 
         //Fim das funções da camera
 
-        private void btnInserir_Click(object sender, EventArgs e)
+        private void pacienteExiste(object sender, EventArgs e)
+        {
+            PacienteController controller = new PacienteController();
+            bool retorno = controller.buscaPaciente(txtCpf.Text);
+
+            if (retorno == true)
+            {
+                MessageBox.Show("O CPF informado já está cadastrado no sistema", "Cadastro de Pacientes", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                btnInserir_Click();
+            }
+        }
+
+        private void btnInserir_Click()
         {
             paciente.nome = txtNome.Text;
             paciente.nascimento = txtNascimento.Text;
@@ -161,7 +176,7 @@ namespace SisClin2._0.View
             paciente.numero = txtNumero.Text;
             paciente.profissao = txtProfissao.Text;
 
-            if (!pbFotoPaciente.Image.ToString().Trim().Equals(String.Empty))
+            if (pbFotoPaciente.Image != null)
             {
                 paciente.foto =  txtCpf.Text;
             }

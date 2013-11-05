@@ -55,5 +55,11 @@ namespace SisClin2._0.Controller
             return retorno;
         }
 
+        public bool buscaPaciente(string cpf)
+        {
+            bool retorno = model.buscaPaciente(cpf);
+            return retorno;
+        }
+
     }
 }

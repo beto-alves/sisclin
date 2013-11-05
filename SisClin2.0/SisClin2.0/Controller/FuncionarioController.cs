@@ -65,5 +65,12 @@ namespace SisClin2._0.Controller
             FuncionarioModel model = new FuncionarioModel();
             return model.deletaFuncionario(funcionario);
         }
+
+        public List<FuncionarioVO> listarMedico()
+        {
+            FuncionarioModel model = new FuncionarioModel();
+            return model.listarMedicos();
+        }
+
     }
 }

@@ -213,5 +213,43 @@ namespace SisClin2._0.Model
             return true;
         }
 
+        public bool buscaPaciente(string cpf)
+        {
+            using (MySqlConnection conexao = DaoMySQL.getInstancia().getConexao())
+            {
+                try
+                {
+                    conexao.Open();
+
+                    string sql = "SELECT * FROM `pacientes` WHERE `cpf` = '" + cpf + "'";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, conexao);
+
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                    if (dataReader.HasRows)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+                catch (MySqlException e)
+                {
+                    MessageBox.Show("Erro no acesso ao mysql " + e.Message, "Erro");
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+            }
+
+            return false;
+
+        }
+
     }
 }

@@ -10,7 +10,6 @@ namespace SisClin2._0.Vo
     {
         public int idAgenda;
         public int idMedico;
-        public int idPaciente;
         public DateTime data;
 
         public AgendaVO() { }

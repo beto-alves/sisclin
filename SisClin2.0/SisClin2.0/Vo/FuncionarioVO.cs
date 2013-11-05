@@ -13,5 +13,11 @@ namespace SisClin2._0.Vo
         public string senha;
         public string crm;
         public string especializacao;
+        
+        public override string ToString()
+        {
+            return base.nome;
+        }
+        
     }
 }
