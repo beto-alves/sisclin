@@ -71,10 +71,12 @@
     <Compile Include="Controller\ConsultaController.cs" />
     <Compile Include="Controller\FuncionarioController.cs" />
     <Compile Include="Controller\PacienteController.cs" />
+    <Compile Include="Controller\ProcedimentoController.cs" />
     <Compile Include="Model\ConsultaModel.cs" />
     <Compile Include="Model\DaoMySQL.cs" />
     <Compile Include="Model\FuncionarioModel.cs" />
     <Compile Include="Model\PacienteModel.cs" />
+    <Compile Include="Model\ProcedimentoModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\CadastrarProcedimento.cs">
@@ -168,12 +170,11 @@
       <DependentUpon>VisReceita.cs</DependentUpon>
     </Compile>
     <Compile Include="Vo\AgendaVO.cs" />
-    <Compile Include="Vo\AtestadoVO.cs" />
     <Compile Include="Vo\ConsultaVO.cs" />
     <Compile Include="Vo\FuncionarioVO.cs" />
     <Compile Include="Vo\PacienteVO.cs" />
     <Compile Include="Vo\PessoaVO.cs" />
-    <Compile Include="Vo\ReceitaVO.cs" />
+    <Compile Include="Vo\ProcedimentoVO.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -183,6 +184,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\CadastrarProcedimento.resx">
+      <DependentUpon>CadastrarProcedimento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CadastroFuncionarios.resx">
       <DependentUpon>CadastroFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
