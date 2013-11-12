@@ -35,6 +35,7 @@
             this.dtDataConsulta = new System.Windows.Forms.DateTimePicker();
             this.dgListaConsultas = new System.Windows.Forms.DataGridView();
             this.btnInserir = new System.Windows.Forms.Button();
+            this.btnDesmarcar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgListaConsultas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +76,7 @@
             this.dtDataConsulta.Name = "dtDataConsulta";
             this.dtDataConsulta.Size = new System.Drawing.Size(113, 22);
             this.dtDataConsulta.TabIndex = 10;
-            this.dtDataConsulta.Value = new System.DateTime(2013, 10, 5, 0, 0, 0, 0);
+            this.dtDataConsulta.Value = new System.DateTime(2013, 11, 6, 0, 0, 0, 0);
             this.dtDataConsulta.ValueChanged += new System.EventHandler(this.dtDataConsulta_ValueChanged);
             // 
             // dgListaConsultas
@@ -89,7 +90,8 @@
             this.dgListaConsultas.RowTemplate.Height = 24;
             this.dgListaConsultas.Size = new System.Drawing.Size(534, 337);
             this.dgListaConsultas.TabIndex = 14;
-            this.dgListaConsultas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListaConsultas_CellClick);
+            this.dgListaConsultas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListaConsultas_CellClick_1);
+            this.dgListaConsultas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListaConsultas_CellClick);
             // 
             // btnInserir
             // 
@@ -102,15 +104,31 @@
             this.btnInserir.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnInserir.Size = new System.Drawing.Size(160, 40);
             this.btnInserir.TabIndex = 38;
-            this.btnInserir.Text = "Inserir";
+            this.btnInserir.Text = "Salvar";
             this.btnInserir.UseVisualStyleBackColor = true;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
+            // 
+            // btnDesmarcar
+            // 
+            this.btnDesmarcar.Enabled = false;
+            this.btnDesmarcar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDesmarcar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDesmarcar.Location = new System.Drawing.Point(393, 449);
+            this.btnDesmarcar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDesmarcar.Name = "btnDesmarcar";
+            this.btnDesmarcar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnDesmarcar.Size = new System.Drawing.Size(160, 40);
+            this.btnDesmarcar.TabIndex = 39;
+            this.btnDesmarcar.Text = "Desmarcar";
+            this.btnDesmarcar.UseVisualStyleBackColor = true;
+            this.btnDesmarcar.Click += new System.EventHandler(this.btnDesmarcar_Click);
             // 
             // MarcaConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 504);
+            this.Controls.Add(this.btnDesmarcar);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.dgListaConsultas);
             this.Controls.Add(this.dtDataConsulta);
@@ -134,5 +152,6 @@
         private System.Windows.Forms.DateTimePicker dtDataConsulta;
         private System.Windows.Forms.DataGridView dgListaConsultas;
         private System.Windows.Forms.Button btnInserir;
+        private System.Windows.Forms.Button btnDesmarcar;
     }
 }

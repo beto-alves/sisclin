@@ -21,14 +21,7 @@ namespace SisClin2._0.Model
                 {
                     conexao.Open();
 
-                    //SELECT agenda.idAgenda, horario, pacientes.idpaciente, nome
-                    //FROM horarioagenda
-                    //LEFT JOIN pacientes ON pacientes.idpaciente = horarioagenda.idpaciente
-                    //INNER JOIN AGENDA ON AGENDA.IDAGENDA = HORARIOAGENDA.IDAGENDA
-                    //WHERE idmedico =2
-                    //AND data =  '12/04/2013'
-
-                    String sql = "SELECT agenda.idAgenda, horario, pacientes.idpaciente, nome FROM horarioagenda";
+                    String sql = "SELECT agenda.idAgenda, horario, pacientes.idPaciente, horarioagenda.idCodigo, nome FROM horarioagenda";
                     sql += " LEFT JOIN pacientes ON pacientes.idpaciente = horarioagenda.idpaciente";
                     sql += " INNER JOIN AGENDA ON AGENDA.IDAGENDA = HORARIOAGENDA.IDAGENDA";
                     sql += " WHERE idmedico = " + idMedico + " AND data = '" + data + "'";
@@ -86,6 +79,47 @@ namespace SisClin2._0.Model
             }
             return retorno;
         }
+
+        public bool atualizaAgenda(DataTable table, int medico, string dataAgenda)
+        {
+            using (MySqlConnection conexao = DaoMySQL.getInstancia().getConexao())
+            {
+                try
+                {
+                    conexao.Open();
+                    MySqlCommand cmd;
+
+                    foreach (DataRow row in table.Rows)
+                    {
+
+                        string sql;
+
+                        if (String.IsNullOrEmpty(row["idPaciente"].ToString()) || row["idPaciente"].Equals(0))
+                        {
+                            sql = "UPDATE `horarioagenda` SET `idPaciente`= null WHERE idCodigo = " + row["idCodigo"];
+                        }
+                        else
+                        {
+                            sql = "UPDATE `horarioagenda` SET `idPaciente`= " + row["idPaciente"] + " WHERE idCodigo = " + row["idCodigo"];
+                        }
+
+                        cmd = new MySqlCommand(sql, conexao);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                }
+                catch (MySqlException e)
+                {
+                    MessageBox.Show("Erro no acesso ao mysql " + e.Message, "Erro");
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+            }
+            return true;
+        }
+
 
     }
 }

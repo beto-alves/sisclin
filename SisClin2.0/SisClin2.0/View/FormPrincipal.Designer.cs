@@ -36,11 +36,12 @@
             this.smnPesquisaPacientes = new System.Windows.Forms.ToolStripMenuItem();
             this.mnMedico = new System.Windows.Forms.ToolStripMenuItem();
             this.smnVerConsultas = new System.Windows.Forms.ToolStripMenuItem();
-            this.smnRealizaConsultas = new System.Windows.Forms.ToolStripMenuItem();
             this.smnPesquisaPaciente = new System.Windows.Forms.ToolStripMenuItem();
             this.mnAdministrador = new System.Windows.Forms.ToolStripMenuItem();
             this.smnCadFuncionario = new System.Windows.Forms.ToolStripMenuItem();
             this.smnListaFuncionarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.smnCadProcedimento = new System.Windows.Forms.ToolStripMenuItem();
+            this.smnListaProcedimentos = new System.Windows.Forms.ToolStripMenuItem();
             this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.smnMeusDados = new System.Windows.Forms.ToolStripMenuItem();
             this.smnSair = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,7 +100,6 @@
             // 
             this.mnMedico.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.smnVerConsultas,
-            this.smnRealizaConsultas,
             this.smnPesquisaPaciente});
             this.mnMedico.Name = "mnMedico";
             this.mnMedico.Size = new System.Drawing.Size(71, 24);
@@ -112,13 +112,6 @@
             this.smnVerConsultas.Text = "Ver Agenda";
             this.smnVerConsultas.Click += new System.EventHandler(this.smnVerConsultas_Click);
             // 
-            // smnRealizaConsultas
-            // 
-            this.smnRealizaConsultas.Name = "smnRealizaConsultas";
-            this.smnRealizaConsultas.Size = new System.Drawing.Size(206, 24);
-            this.smnRealizaConsultas.Text = "Realizar Consulta";
-            this.smnRealizaConsultas.Click += new System.EventHandler(this.smnRealizaConsultas_Click);
-            // 
             // smnPesquisaPaciente
             // 
             this.smnPesquisaPaciente.Name = "smnPesquisaPaciente";
@@ -130,7 +123,9 @@
             // 
             this.mnAdministrador.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.smnCadFuncionario,
-            this.smnListaFuncionarios});
+            this.smnListaFuncionarios,
+            this.smnCadProcedimento,
+            this.smnListaProcedimentos});
             this.mnAdministrador.Name = "mnAdministrador";
             this.mnAdministrador.Size = new System.Drawing.Size(116, 24);
             this.mnAdministrador.Text = "Administrador";
@@ -138,16 +133,30 @@
             // smnCadFuncionario
             // 
             this.smnCadFuncionario.Name = "smnCadFuncionario";
-            this.smnCadFuncionario.Size = new System.Drawing.Size(222, 24);
+            this.smnCadFuncionario.Size = new System.Drawing.Size(255, 24);
             this.smnCadFuncionario.Text = "Cadastrar Funcionário";
             this.smnCadFuncionario.Click += new System.EventHandler(this.smnCadFuncionario_Click);
             // 
             // smnListaFuncionarios
             // 
             this.smnListaFuncionarios.Name = "smnListaFuncionarios";
-            this.smnListaFuncionarios.Size = new System.Drawing.Size(222, 24);
+            this.smnListaFuncionarios.Size = new System.Drawing.Size(255, 24);
             this.smnListaFuncionarios.Text = "Lista de Funcionários";
             this.smnListaFuncionarios.Click += new System.EventHandler(this.smnListaFuncionarios_Click);
+            // 
+            // smnCadProcedimento
+            // 
+            this.smnCadProcedimento.Name = "smnCadProcedimento";
+            this.smnCadProcedimento.Size = new System.Drawing.Size(255, 24);
+            this.smnCadProcedimento.Text = "Cadastro de Procedimento";
+            this.smnCadProcedimento.Click += new System.EventHandler(this.smnCadProcedimento_Click);
+            // 
+            // smnListaProcedimentos
+            // 
+            this.smnListaProcedimentos.Name = "smnListaProcedimentos";
+            this.smnListaProcedimentos.Size = new System.Drawing.Size(255, 24);
+            this.smnListaProcedimentos.Text = "Lista de Procedimento";
+            this.smnListaProcedimentos.Click += new System.EventHandler(this.smnListaProcedimentos_Click);
             // 
             // usuárioToolStripMenuItem
             // 
@@ -225,7 +234,6 @@
         private System.Windows.Forms.ToolStripMenuItem smnCadPaciente;
         private System.Windows.Forms.ToolStripMenuItem smnPesquisaPacientes;
         private System.Windows.Forms.ToolStripMenuItem smnVerConsultas;
-        private System.Windows.Forms.ToolStripMenuItem smnRealizaConsultas;
         private System.Windows.Forms.ToolStripMenuItem smnPesquisaPaciente;
         private System.Windows.Forms.ToolStripMenuItem smnCadFuncionario;
         private System.Windows.Forms.ToolStripMenuItem smnListaFuncionarios;
@@ -235,5 +243,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel txtBemVindo;
         private System.Windows.Forms.ToolStripStatusLabel txtNomeUser;
+        private System.Windows.Forms.ToolStripMenuItem smnCadProcedimento;
+        private System.Windows.Forms.ToolStripMenuItem smnListaProcedimentos;
     }
 }

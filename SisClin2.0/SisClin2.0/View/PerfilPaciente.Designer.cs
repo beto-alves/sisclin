@@ -54,6 +54,7 @@
             this.btnConsultas.TabIndex = 2;
             this.btnConsultas.Text = "Histório de Consultas";
             this.btnConsultas.UseVisualStyleBackColor = true;
+            this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
             // 
             // btnProcedimentos
             // 

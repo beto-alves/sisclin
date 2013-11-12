@@ -47,7 +47,7 @@ namespace SisClin2._0.View
                 case "Secretária" :
                     mnSecretaria.Enabled = true;
                 break;
-                case "Recepcionista" :
+                case "Médico" :
                     mnMedico.Enabled = true;
                 break;
             }
@@ -64,12 +64,6 @@ namespace SisClin2._0.View
             objMarcaConsulta.ShowDialog();
         }
 
-        private void smnListaConsulta_Click(object sender, EventArgs e)
-        {
-            ListaConsultas objListaConsultas = new ListaConsultas();
-            objListaConsultas.ShowDialog();
-        }
-
         private void smnCadPaciente_Click(object sender, EventArgs e)
         {
             CadastroPacientes objCadastroPacientes = new CadastroPacientes();
@@ -84,15 +78,16 @@ namespace SisClin2._0.View
 
         private void smnVerConsultas_Click(object sender, EventArgs e)
         {
-           /**
-            * @todo criar tela para exibir agenda do dia.
-            **/
-        }
-
-        private void smnRealizaConsultas_Click(object sender, EventArgs e)
-        {
-            RealizarConsulta objRealizaConsulta = new RealizarConsulta();
-            objRealizaConsulta.ShowDialog();
+            if (funcionarioVO.funcao == "Médico")
+            {
+                MarcaConsulta objMarcaConsulta = new MarcaConsulta(funcionarioVO, true);
+                objMarcaConsulta.ShowDialog();
+            }
+            else
+            {
+                MarcaConsulta objMarcaConsulta = new MarcaConsulta();
+                objMarcaConsulta.ShowDialog();
+            }
         }
 
         private void smnPesquisaPaciente_Click(object sender, EventArgs e)
@@ -119,5 +114,16 @@ namespace SisClin2._0.View
             objMeusDados.ShowDialog();
         }
 
+        private void smnCadProcedimento_Click(object sender, EventArgs e)
+        {
+            CadastrarProcedimento objCadProcedimento = new CadastrarProcedimento();
+            objCadProcedimento.ShowDialog();
+        }
+
+        private void smnListaProcedimentos_Click(object sender, EventArgs e)
+        {
+            ListaProcedimento listaProcedimento = new ListaProcedimento();
+            listaProcedimento.ShowDialog();
+        }
     }
 }

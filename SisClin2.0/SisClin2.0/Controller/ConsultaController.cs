@@ -22,5 +22,10 @@ namespace SisClin2._0.Controller
             return consultaModel.inserAgenda(table, medico, dataAgenda);
         }
 
+        public bool atualizaAgenda(DataTable table, int medico, string dataAgenda)
+        {
+            return consultaModel.atualizaAgenda(table, medico, dataAgenda);
+        }
+
     }
 }

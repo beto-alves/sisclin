@@ -30,6 +30,12 @@ namespace SisClin2._0.View
             lblNome.Text = paciente.nome;
         }
 
+        private void btnConsultas_Click(object sender, EventArgs e)
+        {
+            ListaConsultas listaConsultas = new ListaConsultas(paciente.id);
+            listaConsultas.ShowDialog();
+        }
+
        
     }
 }
