@@ -16,10 +16,10 @@ namespace SisClin2._0.View
     {
         private FuncionarioController funcionarioController;
         private PacienteController pacienteController;
+        private ProcedimentoController procedimentoController;
 
         private FuncionarioVO funcionarioVO;
         private PacienteVO pacienteVO;
-
 
         public RealizarConsulta(int idMedico, int idPaciente, int horario, string data)
         {            
@@ -28,6 +28,7 @@ namespace SisClin2._0.View
 
             this.funcionarioController = new FuncionarioController();
             this.pacienteController = new PacienteController();
+            this.procedimentoController = new ProcedimentoController();
 
             this.funcionarioVO = funcionarioController.buscaFuncionario(idMedico);
             this.pacienteVO = pacienteController.buscaPaciente(idPaciente);
@@ -35,6 +36,8 @@ namespace SisClin2._0.View
             lblHorario.Text = horario.ToString();
             lblPaciente.Text = this.pacienteVO.nome;
             lblMedico.Text = this.funcionarioVO.nome;
+
+            cbProcedimentos.DataSource = procedimentoController.listaProcedimentos();
             
         }
 

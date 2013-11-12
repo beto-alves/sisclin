@@ -41,5 +41,79 @@ namespace SisClin2._0.Model
             return retorno;
         }
 
+        public List<ProcedimentoVO> listaProcedimentos()
+        {
+
+            List<ProcedimentoVO> lista = new List<ProcedimentoVO>();
+
+            using (MySqlConnection conexao = DaoMySQL.getInstancia().getConexao())
+            {
+                try
+                {
+                    conexao.Open();
+
+                    string sql = "SELECT * FROM `procedimentos`";
+                    MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            ProcedimentoVO procedimento = new ProcedimentoVO();
+
+                            procedimento.idProcedimento = int.Parse(reader["idProcedimento"].ToString());
+                            procedimento.nomeProcedimento = reader["nome"].ToString();
+                            procedimento.descricao = reader["descricao"].ToString();
+                            procedimento.valor = float.Parse(reader["valor"].ToString());
+
+                            lista.Add(procedimento);
+                        }
+                    }
+
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+            }
+            return lista;        
+        }
+
+        public DataTable listarProcedimentos()
+        {
+            DataTable dtProcedimentos = new DataTable();
+
+            using (MySqlConnection conexao = DaoMySQL.getInstancia().getConexao())
+            {
+                try
+                {
+                    conexao.Open();
+
+                    String sql = "SELECT * FROM `procedimentos`";
+
+                    MySqlCommand mysqlCmd = new MySqlCommand(sql, conexao);
+
+                    MySqlDataAdapter da = new MySqlDataAdapter(mysqlCmd);
+
+                    da.Fill(dtProcedimentos);
+
+                }
+                catch (MySqlException e)
+                {
+                    throw;
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+            }
+            return dtProcedimentos;
+        }
+
     }
 }

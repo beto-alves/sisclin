@@ -205,6 +205,9 @@
     <EmbeddedResource Include="View\ListaConsultas.resx">
       <DependentUpon>ListaConsultas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ListaProcedimento.resx">
+      <DependentUpon>ListaProcedimento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\PerfilPaciente.resx">
       <DependentUpon>PerfilPaciente.cs</DependentUpon>
     </EmbeddedResource>

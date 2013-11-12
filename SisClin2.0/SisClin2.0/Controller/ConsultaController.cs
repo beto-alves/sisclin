@@ -27,5 +27,7 @@ namespace SisClin2._0.Controller
             return consultaModel.atualizaAgenda(table, medico, dataAgenda);
         }
 
+        
+
     }
 }

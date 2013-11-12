@@ -12,5 +12,11 @@ namespace SisClin2._0.Vo
         public string nomeProcedimento;
         public string descricao;
         public float valor;
+
+        public override string ToString()
+        {
+            return nomeProcedimento;
+        }
     }
+
 }

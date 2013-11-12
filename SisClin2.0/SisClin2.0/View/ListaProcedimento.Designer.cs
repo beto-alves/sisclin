@@ -28,11 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dgListaProcedimentos = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgListaProcedimentos)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgListaProcedimentos
+            // 
+            this.dgListaProcedimentos.AllowUserToAddRows = false;
+            this.dgListaProcedimentos.AllowUserToDeleteRows = false;
+            this.dgListaProcedimentos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgListaProcedimentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgListaProcedimentos.Location = new System.Drawing.Point(12, 53);
+            this.dgListaProcedimentos.Name = "dgListaProcedimentos";
+            this.dgListaProcedimentos.ReadOnly = true;
+            this.dgListaProcedimentos.RowTemplate.Height = 24;
+            this.dgListaProcedimentos.Size = new System.Drawing.Size(858, 390);
+            this.dgListaProcedimentos.TabIndex = 4;
+            this.dgListaProcedimentos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListaProcedimentos_CellContentDoubleClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(237, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Lista de Procedimentos";
+            // 
+            // ListaProcedimento
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "ListaProcedimento";
+            this.ClientSize = new System.Drawing.Size(882, 455);
+            this.Controls.Add(this.dgListaProcedimentos);
+            this.Controls.Add(this.label1);
+            this.Name = "ListaProcedimento";
+            this.ShowIcon = false;
+            this.Text = "Lista Procedimento";
+            ((System.ComponentModel.ISupportInitialize)(this.dgListaProcedimentos)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgListaProcedimentos;
+        private System.Windows.Forms.Label label1;
     }
 }

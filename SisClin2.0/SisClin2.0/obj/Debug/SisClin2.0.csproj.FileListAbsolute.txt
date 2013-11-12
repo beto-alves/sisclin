@@ -22,3 +22,4 @@ E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\bin\Debug\AForge.Video.Direct
 E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\bin\Debug\AForge.Video.dll
 E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.PerfilPaciente.resources
 E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.CadastrarProcedimento.resources
+E:\SegundoSemestre13\SisClin\SisClin2.0\SisClin2.0\obj\Debug\SisClin2._0.View.ListaProcedimento.resources

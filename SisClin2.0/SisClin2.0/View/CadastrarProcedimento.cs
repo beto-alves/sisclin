@@ -30,9 +30,8 @@ namespace SisClin2._0.View
 
             if (this.controller.cadastraProcedimento(this.vo) != 0)
             {
-                MessageBox.Show("TESTE DE PROCEDIMENTO");
+                MessageBox.Show(this, "Procedimento cadastrado com sucesso", "Cadastro de Procedimentos", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
     }
 }

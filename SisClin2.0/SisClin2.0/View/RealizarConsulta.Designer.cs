@@ -43,10 +43,10 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnAdicionar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnAdicionar = new System.Windows.Forms.Button();
+            this.cbProcedimentos = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -196,7 +196,7 @@
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.btnAdicionar);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbProcedimentos);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Location = new System.Drawing.Point(711, 107);
             this.groupBox1.Name = "groupBox1";
@@ -205,22 +205,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Procedimentos Solicitados";
             // 
-            // label7
+            // dataGridView1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 36);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 17);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Procedimentos";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(116, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(320, 24);
-            this.comboBox1.TabIndex = 1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(11, 77);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(616, 521);
+            this.dataGridView1.TabIndex = 3;
             // 
             // btnAdicionar
             // 
@@ -231,14 +223,22 @@
             this.btnAdicionar.Text = "Adicionar Procedimento";
             this.btnAdicionar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // cbProcedimentos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 77);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(616, 521);
-            this.dataGridView1.TabIndex = 3;
+            this.cbProcedimentos.FormattingEnabled = true;
+            this.cbProcedimentos.Location = new System.Drawing.Point(116, 33);
+            this.cbProcedimentos.Name = "cbProcedimentos";
+            this.cbProcedimentos.Size = new System.Drawing.Size(320, 24);
+            this.cbProcedimentos.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 36);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 17);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Procedimentos";
             // 
             // RealizarConsulta
             // 
@@ -288,7 +288,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAdicionar;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbProcedimentos;
         private System.Windows.Forms.Label label7;
     }
 }
