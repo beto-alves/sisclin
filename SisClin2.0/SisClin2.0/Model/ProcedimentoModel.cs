@@ -72,7 +72,7 @@ namespace SisClin2._0.Model
                     }
 
                 }
-                catch (Exception)
+                catch (MySqlException)
                 {
                     throw;
                 }
@@ -114,6 +114,99 @@ namespace SisClin2._0.Model
             }
             return dtProcedimentos;
         }
+
+        public ProcedimentoVO buscaProcedimento(int idProcedimento)
+        {
+            ProcedimentoVO procedimento = new ProcedimentoVO();
+            using (MySqlConnection conexao = DaoMySQL.getInstancia().getConexao())
+            {
+                try
+                {                                
+                    conexao.Open();
+
+                    string sql = "SELECT * FROM `procedimentos` WHERE `idProcedimento` = " + idProcedimento;
+
+                    MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        procedimento.idProcedimento = int.Parse(reader["idProcedimento"].ToString());
+                        procedimento.nomeProcedimento = reader["nome"].ToString();
+                        procedimento.descricao = reader["descricao"].ToString();
+                        procedimento.valor = float.Parse(reader["valor"].ToString());
+                    }
+
+                }
+                catch (MySqlException)
+                {
+                    throw;
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+            }
+            return procedimento;
+        }
+
+        public int excluirProcedimento(int idProcedimento)
+        {
+            int retorno;
+            using (MySqlConnection conexao = DaoMySQL.getInstancia().getConexao())
+            {
+                try
+                {
+                    conexao.Open();
+
+                    string sql = "DELETE FROM `procedimentos` WHERE `idProcedimento` = " + idProcedimento;
+
+                    MySqlCommand cmd = new MySqlCommand(sql, conexao);
+
+                    retorno = cmd.ExecuteNonQuery();
+    
+                }
+                catch (MySqlException)
+                {
+                    throw;
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+            }
+            return retorno;
+        }
+
+        public int atualizaProcedimento(ProcedimentoVO procedimento)
+        {
+            int retorno;
+            using (MySqlConnection conexao = DaoMySQL.getInstancia().getConexao())
+            {
+                try
+                {
+                    conexao.Open();
+
+                    string sql = "UPDATE `procedimentos` SET `nome`= '" + procedimento.nomeProcedimento + "',`descricao`= '" + procedimento.descricao + "',`valor`= '" + procedimento.valor + "' WHERE `idProcedimento` = " + procedimento.idProcedimento;
+                    MySqlCommand cmd = new MySqlCommand(sql, conexao);
+
+                    retorno = cmd.ExecuteNonQuery();
+
+
+                }
+                catch (MySqlException)
+                {
+                    throw;
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+            }
+            return retorno;
+        }
+
 
     }
 }

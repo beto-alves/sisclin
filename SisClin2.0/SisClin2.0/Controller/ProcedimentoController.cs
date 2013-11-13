@@ -33,5 +33,20 @@ namespace SisClin2._0.Controller
             return this.model.listarProcedimentos();
         }
 
+        public ProcedimentoVO buscaProcedimento(int idProcedimento)
+        {
+            return this.model.buscaProcedimento(idProcedimento);
+        }
+
+        public int excluirProcedimento(int idProcedimento)
+        {
+            return this.model.excluirProcedimento(idProcedimento);
+        }
+
+        public int atualizaProcedimento(ProcedimentoVO procedimento)
+        {
+            return this.model.atualizaProcedimento(procedimento);
+        }
+
     }
 }

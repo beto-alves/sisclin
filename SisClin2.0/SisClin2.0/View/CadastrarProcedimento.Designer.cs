@@ -62,6 +62,7 @@
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(450, 22);
             this.txtDescricao.TabIndex = 9;
+            this.txtDescricao.TextChanged += new System.EventHandler(this.liberaBotao);
             // 
             // label3
             // 
@@ -80,6 +81,7 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(450, 22);
             this.txtValor.TabIndex = 7;
+            this.txtValor.TextChanged += new System.EventHandler(this.liberaBotao);
             // 
             // label1
             // 
@@ -98,6 +100,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(450, 22);
             this.txtNome.TabIndex = 5;
+            this.txtNome.TextChanged += new System.EventHandler(this.liberaBotao);
             // 
             // label2
             // 
@@ -124,9 +127,11 @@
             this.btnExcluir.TabIndex = 25;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnInserir
             // 
+            this.btnInserir.Enabled = false;
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.Image = ((System.Drawing.Image)(resources.GetObject("btnInserir.Image")));
             this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

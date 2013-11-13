@@ -19,7 +19,12 @@ namespace SisClin2._0.View
         public ListaProcedimento()
         {
             InitializeComponent();
-            
+
+            carregaGrid();
+        }
+
+        public void carregaGrid()
+        {
             dgListaProcedimentos.DataSource = controller.listarProcedimentos();
             dgListaProcedimentos.Columns["idProcedimento"].Visible = false;
             dgListaProcedimentos.Columns["nome"].HeaderText = "Nome";
@@ -27,9 +32,16 @@ namespace SisClin2._0.View
             dgListaProcedimentos.Columns["valor"].HeaderText = "Valor";
         }
 
-        private void dgListaProcedimentos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgListaProcedimentos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            int idProcedimento = int.Parse(dgListaProcedimentos.Rows[e.RowIndex].Cells["idProcedimento"].Value.ToString());
+            CadastrarProcedimento atualizarProcedimento = new CadastrarProcedimento(idProcedimento);
+            atualizarProcedimento.ShowDialog();
+
+            carregaGrid();
 
         }
+
+        
     }
 }

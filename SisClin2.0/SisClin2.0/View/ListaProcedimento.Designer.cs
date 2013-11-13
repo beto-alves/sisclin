@@ -45,7 +45,7 @@
             this.dgListaProcedimentos.RowTemplate.Height = 24;
             this.dgListaProcedimentos.Size = new System.Drawing.Size(858, 390);
             this.dgListaProcedimentos.TabIndex = 4;
-            this.dgListaProcedimentos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListaProcedimentos_CellContentDoubleClick);
+            this.dgListaProcedimentos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListaProcedimentos_CellDoubleClick);
             // 
             // label1
             // 
