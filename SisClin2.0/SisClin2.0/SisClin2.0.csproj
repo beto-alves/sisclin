@@ -157,6 +157,7 @@
     <Compile Include="Vo\PacienteVO.cs" />
     <Compile Include="Vo\PessoaVO.cs" />
     <Compile Include="Vo\ProcedimentoVO.cs" />
+    <Compile Include="Vo\TipoConsultaVO.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

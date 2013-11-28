@@ -333,5 +333,38 @@ namespace SisClin2._0.Model
             return true;
         }
 
+        public bool buscaFuncionario(string cpf)
+        {
+            using (MySqlConnection conexao = DaoMySQL.getInstancia().getConexao())
+            {
+                try
+                {
+                    conexao.Open();
+                    string sql = "SELECT * FROM `funcionario` WHERE `cpf` = '" + cpf +"'";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                    MySqlDataReader dr = cmd.ExecuteReader();
+
+                    if (dr.HasRows)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+                catch (MySqlException)
+                {
+                    throw;
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+            }
+        }
+
     }
 }

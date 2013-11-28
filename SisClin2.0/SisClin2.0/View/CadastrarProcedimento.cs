@@ -58,7 +58,12 @@ namespace SisClin2._0.View
                 this.vo = new ProcedimentoVO();
 
                 this.vo.nomeProcedimento = txtNome.Text;
-                this.vo.valor = float.Parse(txtValor.Text);
+
+                if (!String.IsNullOrEmpty(txtValor.Text))
+                {
+                    this.vo.valor = float.Parse(txtValor.Text);
+                }
+
                 this.vo.descricao = txtDescricao.Text;
 
                 if (this.controller.cadastraProcedimento(this.vo) != 0)
@@ -75,8 +80,7 @@ namespace SisClin2._0.View
 
         private void liberaBotao(object sender, EventArgs e)
         {
-            if (!txtNome.Text.Trim().Equals(String.Empty) && !txtDescricao.Text.Trim().Equals(String.Empty) &&
-               !txtValor.Text.Trim().Equals(String.Empty))
+            if (!txtNome.Text.Trim().Equals(String.Empty) && !txtDescricao.Text.Trim().Equals(String.Empty))
             {
                 btnInserir.Enabled = true;
             }

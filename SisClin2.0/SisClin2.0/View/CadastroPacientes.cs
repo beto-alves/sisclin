@@ -142,7 +142,6 @@ namespace SisClin2._0.View
         }
 
         //Fim das funções da camera
-
         private void pacienteExiste(object sender, EventArgs e)
         {
             PacienteController controller = new PacienteController();

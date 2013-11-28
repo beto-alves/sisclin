@@ -37,31 +37,36 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(330, 25);
+            this.label1.Size = new System.Drawing.Size(321, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Visualizar Histórico de Consultas";
+            this.label1.Text = "Visualizar Histórico de Consultas:";
             // 
             // lblPaciente
             // 
             this.lblPaciente.AutoSize = true;
-            this.lblPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaciente.Location = new System.Drawing.Point(349, 13);
+            this.lblPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaciente.Location = new System.Drawing.Point(340, 13);
             this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.Size = new System.Drawing.Size(96, 25);
+            this.lblPaciente.Size = new System.Drawing.Size(91, 24);
             this.lblPaciente.TabIndex = 1;
             this.lblPaciente.Text = "Paciente";
             // 
             // dgListaConsultas
             // 
+            this.dgListaConsultas.AllowUserToAddRows = false;
+            this.dgListaConsultas.AllowUserToDeleteRows = false;
+            this.dgListaConsultas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgListaConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgListaConsultas.Location = new System.Drawing.Point(18, 55);
             this.dgListaConsultas.Name = "dgListaConsultas";
+            this.dgListaConsultas.ReadOnly = true;
             this.dgListaConsultas.RowTemplate.Height = 24;
             this.dgListaConsultas.Size = new System.Drawing.Size(894, 458);
             this.dgListaConsultas.TabIndex = 2;
+            this.dgListaConsultas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgListaConsultas_CellDoubleClick);
             // 
             // ListaConsultas
             // 

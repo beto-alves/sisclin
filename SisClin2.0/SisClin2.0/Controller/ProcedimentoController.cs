@@ -48,5 +48,10 @@ namespace SisClin2._0.Controller
             return this.model.atualizaProcedimento(procedimento);
         }
 
+        public DataTable procedimentosPorConsulta(int idConsulta)
+        {
+            return this.model.procedimentosPorConsulta(idConsulta);
+        }
+
     }
 }

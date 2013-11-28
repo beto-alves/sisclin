@@ -30,6 +30,8 @@ namespace SisClin2._0.View
             dgListaProcedimentos.Columns["nome"].HeaderText = "Nome";
             dgListaProcedimentos.Columns["descricao"].HeaderText = "Descrição";
             dgListaProcedimentos.Columns["valor"].HeaderText = "Valor";
+            dgListaProcedimentos.Columns["valor"].DefaultCellStyle.Format = "N2";
+            dgListaProcedimentos.Columns["valor"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
         private void dgListaProcedimentos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

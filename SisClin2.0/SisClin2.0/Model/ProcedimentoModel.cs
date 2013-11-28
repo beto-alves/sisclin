@@ -103,7 +103,7 @@ namespace SisClin2._0.Model
                     da.Fill(dtProcedimentos);
 
                 }
-                catch (MySqlException e)
+                catch (MySqlException)
                 {
                     throw;
                 }
@@ -205,6 +205,37 @@ namespace SisClin2._0.Model
                 }
             }
             return retorno;
+        }
+
+        public DataTable procedimentosPorConsulta(int idConsulta)
+        {
+            DataTable dtProcedimentos = new DataTable();
+
+            using (MySqlConnection conexao = DaoMySQL.getInstancia().getConexao())
+            {
+                try
+                {
+                    conexao.Open();
+
+                    String sql = "SELECT * FROM  `procedimentoconsulta` INNER JOIN  `procedimentos` ON  `procedimentos`.`idProcedimento` =  `procedimentoconsulta`.`idProcedimento`  WHERE `idConsulta` = " + idConsulta;
+
+                    MySqlCommand mysqlCmd = new MySqlCommand(sql, conexao);
+
+                    MySqlDataAdapter da = new MySqlDataAdapter(mysqlCmd);
+
+                    da.Fill(dtProcedimentos);
+
+                }
+                catch (MySqlException)
+                {
+                    throw;
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+            }
+            return dtProcedimentos;
         }
 
 

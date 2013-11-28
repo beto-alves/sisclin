@@ -38,17 +38,25 @@
             this.btnInserir = new System.Windows.Forms.Button();
             this.lblHorario = new System.Windows.Forms.Label();
             this.lblPaciente = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAtestado = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtReceita = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgProcedimentosConsulta = new System.Windows.Forms.DataGridView();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.cbProcedimentos = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.lblRetorno = new System.Windows.Forms.Label();
+            this.btnConsultaAnterior = new System.Windows.Forms.Button();
+            this.lblDt = new System.Windows.Forms.Label();
+            this.lblData = new System.Windows.Forms.Label();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProcedimentosConsulta)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -117,7 +125,6 @@
             // 
             // btnInserir
             // 
-            this.btnInserir.Enabled = false;
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.Image = ((System.Drawing.Image)(resources.GetObject("btnInserir.Image")));
             this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -125,10 +132,11 @@
             this.btnInserir.Margin = new System.Windows.Forms.Padding(4);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnInserir.Size = new System.Drawing.Size(160, 40);
+            this.btnInserir.Size = new System.Drawing.Size(257, 40);
             this.btnInserir.TabIndex = 1017;
-            this.btnInserir.Text = "Inserir";
+            this.btnInserir.Text = "Finalizar Consulta";
             this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // lblHorario
             // 
@@ -152,14 +160,14 @@
             this.lblPaciente.TabIndex = 1019;
             this.lblPaciente.Text = "horario";
             // 
-            // textBox1
+            // txtAtestado
             // 
-            this.textBox1.Location = new System.Drawing.Point(177, 316);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(500, 200);
-            this.textBox1.TabIndex = 1021;
+            this.txtAtestado.Location = new System.Drawing.Point(177, 316);
+            this.txtAtestado.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAtestado.Multiline = true;
+            this.txtAtestado.Name = "txtAtestado";
+            this.txtAtestado.Size = new System.Drawing.Size(500, 200);
+            this.txtAtestado.TabIndex = 1021;
             // 
             // label4
             // 
@@ -172,14 +180,14 @@
             this.label4.TabIndex = 1020;
             this.label4.Text = "Atestado:";
             // 
-            // textBox2
+            // txtReceita
             // 
-            this.textBox2.Location = new System.Drawing.Point(177, 524);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(500, 200);
-            this.textBox2.TabIndex = 1023;
+            this.txtReceita.Location = new System.Drawing.Point(177, 524);
+            this.txtReceita.Margin = new System.Windows.Forms.Padding(4);
+            this.txtReceita.Multiline = true;
+            this.txtReceita.Name = "txtReceita";
+            this.txtReceita.Size = new System.Drawing.Size(500, 200);
+            this.txtReceita.TabIndex = 1023;
             // 
             // label5
             // 
@@ -188,13 +196,13 @@
             this.label5.Location = new System.Drawing.Point(26, 523);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 24);
+            this.label5.Size = new System.Drawing.Size(86, 24);
             this.label5.TabIndex = 1022;
-            this.label5.Text = "Informações:";
+            this.label5.Text = "Receita:";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgProcedimentosConsulta);
             this.groupBox1.Controls.Add(this.btnAdicionar);
             this.groupBox1.Controls.Add(this.cbProcedimentos);
             this.groupBox1.Controls.Add(this.label7);
@@ -205,14 +213,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Procedimentos Solicitados";
             // 
-            // dataGridView1
+            // dgProcedimentosConsulta
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 77);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(616, 521);
-            this.dataGridView1.TabIndex = 3;
+            this.dgProcedimentosConsulta.AllowUserToAddRows = false;
+            this.dgProcedimentosConsulta.AllowUserToDeleteRows = false;
+            this.dgProcedimentosConsulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgProcedimentosConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgProcedimentosConsulta.Location = new System.Drawing.Point(11, 77);
+            this.dgProcedimentosConsulta.Name = "dgProcedimentosConsulta";
+            this.dgProcedimentosConsulta.ReadOnly = true;
+            this.dgProcedimentosConsulta.RowTemplate.Height = 24;
+            this.dgProcedimentosConsulta.Size = new System.Drawing.Size(616, 521);
+            this.dgProcedimentosConsulta.TabIndex = 3;
             // 
             // btnAdicionar
             // 
@@ -222,6 +234,7 @@
             this.btnAdicionar.TabIndex = 2;
             this.btnAdicionar.Text = "Adicionar Procedimento";
             this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // cbProcedimentos
             // 
@@ -240,15 +253,96 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Procedimentos";
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // lblRetorno
+            // 
+            this.lblRetorno.AutoSize = true;
+            this.lblRetorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRetorno.Location = new System.Drawing.Point(707, 18);
+            this.lblRetorno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRetorno.Name = "lblRetorno";
+            this.lblRetorno.Size = new System.Drawing.Size(277, 24);
+            this.lblRetorno.TabIndex = 1028;
+            this.lblRetorno.Text = "Essa consulta é um retorno. ";
+            this.lblRetorno.Visible = false;
+            // 
+            // btnConsultaAnterior
+            // 
+            this.btnConsultaAnterior.Enabled = false;
+            this.btnConsultaAnterior.Location = new System.Drawing.Point(982, 17);
+            this.btnConsultaAnterior.Name = "btnConsultaAnterior";
+            this.btnConsultaAnterior.Size = new System.Drawing.Size(165, 31);
+            this.btnConsultaAnterior.TabIndex = 1029;
+            this.btnConsultaAnterior.Text = "Ver Consulta Anterior";
+            this.btnConsultaAnterior.UseVisualStyleBackColor = true;
+            this.btnConsultaAnterior.Visible = false;
+            this.btnConsultaAnterior.Click += new System.EventHandler(this.btnConsultaAnterior_Click);
+            // 
+            // lblDt
+            // 
+            this.lblDt.AutoSize = true;
+            this.lblDt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDt.Location = new System.Drawing.Point(295, 39);
+            this.lblDt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDt.Name = "lblDt";
+            this.lblDt.Size = new System.Drawing.Size(63, 24);
+            this.lblDt.TabIndex = 1030;
+            this.lblDt.Text = "Data: ";
+            this.lblDt.Visible = false;
+            // 
+            // lblData
+            // 
+            this.lblData.AutoSize = true;
+            this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.Location = new System.Drawing.Point(366, 39);
+            this.lblData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(63, 24);
+            this.lblData.TabIndex = 1031;
+            this.lblData.Text = "Data: ";
+            this.lblData.Visible = false;
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFechar.Location = new System.Drawing.Point(1098, 752);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnFechar.Size = new System.Drawing.Size(257, 40);
+            this.btnFechar.TabIndex = 1032;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
             // RealizarConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1379, 805);
+            this.Controls.Add(this.btnFechar);
+            this.Controls.Add(this.lblData);
+            this.Controls.Add(this.lblDt);
+            this.Controls.Add(this.btnConsultaAnterior);
+            this.Controls.Add(this.lblRetorno);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtReceita);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAtestado);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblPaciente);
             this.Controls.Add(this.lblHorario);
@@ -264,7 +358,7 @@
             this.Text = "Realizar Consulta";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProcedimentosConsulta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,14 +375,22 @@
         private System.Windows.Forms.Button btnInserir;
         private System.Windows.Forms.Label lblHorario;
         private System.Windows.Forms.Label lblPaciente;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAtestado;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtReceita;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgProcedimentosConsulta;
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.ComboBox cbProcedimentos;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Label lblRetorno;
+        private System.Windows.Forms.Button btnConsultaAnterior;
+        private System.Windows.Forms.Label lblDt;
+        private System.Windows.Forms.Label lblData;
+        private System.Windows.Forms.Button btnFechar;
     }
 }

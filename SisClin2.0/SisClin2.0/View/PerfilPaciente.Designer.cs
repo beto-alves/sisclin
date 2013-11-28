@@ -30,7 +30,6 @@
         {
             this.pbFotoPaciente = new System.Windows.Forms.PictureBox();
             this.btnConsultas = new System.Windows.Forms.Button();
-            this.btnProcedimentos = new System.Windows.Forms.Button();
             this.btnFinanceiro = new System.Windows.Forms.Button();
             this.btnInfoPaciente = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
@@ -39,7 +38,7 @@
             // 
             // pbFotoPaciente
             // 
-            this.pbFotoPaciente.Location = new System.Drawing.Point(226, 50);
+            this.pbFotoPaciente.Location = new System.Drawing.Point(217, 50);
             this.pbFotoPaciente.Name = "pbFotoPaciente";
             this.pbFotoPaciente.Size = new System.Drawing.Size(348, 201);
             this.pbFotoPaciente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -48,48 +47,42 @@
             // 
             // btnConsultas
             // 
-            this.btnConsultas.Location = new System.Drawing.Point(307, 317);
+            this.btnConsultas.Location = new System.Drawing.Point(298, 317);
             this.btnConsultas.Name = "btnConsultas";
             this.btnConsultas.Size = new System.Drawing.Size(187, 30);
             this.btnConsultas.TabIndex = 2;
-            this.btnConsultas.Text = "Histório de Consultas";
+            this.btnConsultas.Text = "Histórico de Consultas";
             this.btnConsultas.UseVisualStyleBackColor = true;
             this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
             // 
-            // btnProcedimentos
-            // 
-            this.btnProcedimentos.Location = new System.Drawing.Point(307, 353);
-            this.btnProcedimentos.Name = "btnProcedimentos";
-            this.btnProcedimentos.Size = new System.Drawing.Size(187, 30);
-            this.btnProcedimentos.TabIndex = 3;
-            this.btnProcedimentos.Text = "Histório de Procedimentos";
-            this.btnProcedimentos.UseVisualStyleBackColor = true;
-            // 
             // btnFinanceiro
             // 
-            this.btnFinanceiro.Location = new System.Drawing.Point(307, 389);
+            this.btnFinanceiro.Location = new System.Drawing.Point(298, 353);
             this.btnFinanceiro.Name = "btnFinanceiro";
             this.btnFinanceiro.Size = new System.Drawing.Size(187, 30);
             this.btnFinanceiro.TabIndex = 4;
-            this.btnFinanceiro.Text = "Histório Financeiros";
+            this.btnFinanceiro.Text = "Histórico Financeiros";
             this.btnFinanceiro.UseVisualStyleBackColor = true;
             // 
             // btnInfoPaciente
             // 
-            this.btnInfoPaciente.Location = new System.Drawing.Point(307, 425);
+            this.btnInfoPaciente.Location = new System.Drawing.Point(298, 389);
             this.btnInfoPaciente.Name = "btnInfoPaciente";
             this.btnInfoPaciente.Size = new System.Drawing.Size(187, 30);
             this.btnInfoPaciente.TabIndex = 5;
             this.btnInfoPaciente.Text = "Visualizar Informações";
             this.btnInfoPaciente.UseVisualStyleBackColor = true;
+            this.btnInfoPaciente.Click += new System.EventHandler(this.btnInfoPaciente_Click);
             // 
             // lblNome
             // 
-            this.lblNome.AutoSize = true;
+            this.lblNome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(365, 260);
+            this.lblNome.Location = new System.Drawing.Point(217, 268);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(70, 25);
+            this.lblNome.Size = new System.Drawing.Size(348, 25);
             this.lblNome.TabIndex = 6;
             this.lblNome.Text = "label1";
             this.lblNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -102,15 +95,14 @@
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.btnInfoPaciente);
             this.Controls.Add(this.btnFinanceiro);
-            this.Controls.Add(this.btnProcedimentos);
             this.Controls.Add(this.btnConsultas);
             this.Controls.Add(this.pbFotoPaciente);
             this.Name = "PerfilPaciente";
             this.ShowIcon = false;
             this.Text = "Perfil Paciente";
+            this.Load += new System.EventHandler(this.PerfilPaciente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoPaciente)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -118,7 +110,6 @@
 
         private System.Windows.Forms.PictureBox pbFotoPaciente;
         private System.Windows.Forms.Button btnConsultas;
-        private System.Windows.Forms.Button btnProcedimentos;
         private System.Windows.Forms.Button btnFinanceiro;
         private System.Windows.Forms.Button btnInfoPaciente;
         private System.Windows.Forms.Label lblNome;

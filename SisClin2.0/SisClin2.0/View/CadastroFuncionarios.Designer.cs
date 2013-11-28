@@ -93,7 +93,7 @@
             this.cbCargo.Items.AddRange(new object[] {
             "Administrador",
             "Médico",
-            "Recepcionista"});
+            "Secretária"});
             this.cbCargo.Location = new System.Drawing.Point(86, 11);
             this.cbCargo.Name = "cbCargo";
             this.cbCargo.Size = new System.Drawing.Size(121, 24);
@@ -570,7 +570,7 @@
             this.btnInserir.TabIndex = 19;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
-            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
+            this.btnInserir.Click += new System.EventHandler(this.funcionarioExiste);
             // 
             // btnPesquisar
             // 

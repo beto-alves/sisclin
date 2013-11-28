@@ -52,11 +52,25 @@ namespace SisClin2._0.View
             txtSenha.Text = funcionario.senha;
         }
 
-
-        private void btnInserir_Click(object sender, EventArgs e)
+        private void funcionarioExiste(object sender, EventArgs e)
         {
+            FuncionarioController controller = new FuncionarioController();
+            bool retorno = controller.buscaFuncionario(txtCpf.Text);
 
-           
+            if (retorno == true)
+            {
+                MessageBox.Show("O CPF informado já está cadastrado no sistema", "Cadastro de Pacientes", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                btnInserir_Click();
+            }
+        }
+
+
+
+        private void btnInserir_Click()
+        {           
             funcionario.nome        = txtNome.Text;
             funcionario.nascimento  = txtNascimento.Text;
             funcionario.rg          = txtRg.Text;
@@ -89,8 +103,6 @@ namespace SisClin2._0.View
             {
                 MessageBox.Show("Ocorreu algum erro", "Cadastro de Funcionários", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
 
         private void habilitaGpBox(object sender, EventArgs e)

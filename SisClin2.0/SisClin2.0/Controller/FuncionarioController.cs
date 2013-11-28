@@ -12,13 +12,16 @@ namespace SisClin2._0.Controller
 {
     class FuncionarioController
     {
-        public FuncionarioController() { }
+        private FuncionarioModel model;
+
+        public FuncionarioController() 
+        {
+            this.model = new FuncionarioModel();
+        }
 
         public bool login(FuncionarioVO funcionario)
         {
-            FuncionarioModel model = new FuncionarioModel();
-
-            FuncionarioVO funcionarioLog = model.login(funcionario);
+            FuncionarioVO funcionarioLog = this.model.login(funcionario);
 
             if( funcionario.id != 0 )
             {
@@ -34,42 +37,39 @@ namespace SisClin2._0.Controller
         }
 
         public bool cadFuncionario(FuncionarioVO funcionario)
-        {
-            FuncionarioModel model = new FuncionarioModel();
-
-            bool retorno = model.cadFuncionario(funcionario);
-
+        {         
+            bool retorno = this.model.cadFuncionario(funcionario);
             return retorno;
         }
 
         public DataTable listarFuncionarios()
         {
-            FuncionarioModel model = new FuncionarioModel();
-            return model.listaFuncionarios();
+            return this.model.listaFuncionarios();
         }
 
         public FuncionarioVO buscaFuncionario(int codigo)
         {
-            FuncionarioModel model = new FuncionarioModel();
-            return model.buscaFuncionario(codigo);
+            return this.model.buscaFuncionario(codigo);
         }
 
         public bool atualizaFuncionario(FuncionarioVO funcionario)
         {
-            FuncionarioModel model = new FuncionarioModel();
-            return model.atualizaFuncionario(funcionario);
+            return this.model.atualizaFuncionario(funcionario);
         }
 
         public bool deletaFuncionario(FuncionarioVO funcionario)
         {
-            FuncionarioModel model = new FuncionarioModel();
-            return model.deletaFuncionario(funcionario);
+            return this.model.deletaFuncionario(funcionario);
         }
 
         public List<FuncionarioVO> listarMedico()
+        {          
+            return this.model.listarMedicos();
+        }
+
+        public bool buscaFuncionario(string cpf)
         {
-            FuncionarioModel model = new FuncionarioModel();
-            return model.listarMedicos();
+            return this.model.buscaFuncionario(cpf);
         }
 
     }

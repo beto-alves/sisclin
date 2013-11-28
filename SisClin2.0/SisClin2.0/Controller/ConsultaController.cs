@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SisClin2._0.Vo;
 
 namespace SisClin2._0.Controller
 {
@@ -27,7 +28,26 @@ namespace SisClin2._0.Controller
             return consultaModel.atualizaAgenda(table, medico, dataAgenda);
         }
 
-        
+        public int realizaConsulta(ConsultaVO consulta)
+        {
+            return consultaModel.realizaConsulta(consulta);
+        }
 
+        public DataTable listaConsultasPacientes(PacienteVO paciente)
+        {
+            return consultaModel.listaConsultasPacientes(paciente);
+        }
+
+        public ConsultaVO retornaUltimaConsulta(PacienteVO paciente, FuncionarioVO medico)
+        {
+            return consultaModel.retornaUltimaConsulta(paciente, medico);
+        }
+
+        public ConsultaVO buscaConsultaID(int idConsulta)
+        {
+            return consultaModel.buscaConsultaID(idConsulta);
+        }
+
+        
     }
 }

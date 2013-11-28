@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +11,16 @@ namespace SisClin2._0.Vo
     {
 
         public int idConsulta;
-        public PacienteVO paciente;
         public FuncionarioVO medico;
-        public string dataHorario;
-        public string observacoes;
-
+        public PacienteVO paciente;
+        public int horario;
+        public string data;
+        public string atestado;
+        public string receita;
+        public string informacoes;
+        public DataTable procedimentos;
+        public int tipo;
+        
         public ConsultaVO() { }
 
     }
