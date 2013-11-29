@@ -30,6 +30,8 @@ namespace SisClin2._0.View
         private int tipo;
         private int idConsultaAnterior;
 
+        float valorConsulta;
+
         public DataTable procedimentosConsulta;
 
         public RealizarConsulta(int idConsulta)
@@ -77,6 +79,9 @@ namespace SisClin2._0.View
             btnAdicionar.Enabled = false;
             btnAdicionar.Visible = false;
             cbProcedimentos.Visible = false;
+
+            valorConsulta = 0;
+
                        
         }
         
@@ -110,6 +115,8 @@ namespace SisClin2._0.View
             procedimentosConsulta.Columns.Add("valor");
 
             verificaRetorno();
+
+            valorConsulta = 150;
    
         }
 
@@ -166,9 +173,21 @@ namespace SisClin2._0.View
                 consultaVO.procedimentos = (DataTable)dgProcedimentosConsulta.DataSource;
             }
 
+            float valorTotal = valorConsulta;
+            float valorProcedimentos = 0;
 
+            DataTable procedimentos = (DataTable)dgProcedimentosConsulta.DataSource;
 
-            if (consultaController.realizaConsulta(consultaVO) != 0)
+            foreach (DataRow row in procedimentos.Rows)
+            {
+                valorProcedimentos += float.Parse(row[3].ToString());
+            }
+
+            valorTotal += valorProcedimentos;
+
+            int idConsultaRealizada = consultaController.realizaConsulta(consultaVO);
+
+            if (idConsultaRealizada != 0)
             {
                 MessageBox.Show(this, "Informações inseridas com sucesso", "Realizar Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -177,6 +196,10 @@ namespace SisClin2._0.View
                 MessageBox.Show(this, "Ocorreu um erro no processo", "Realizar Consulta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            MovimentacaoController movController = new MovimentacaoController();
+
+            movController.registraMovimentacao(valorTotal, "D", idConsultaRealizada, this.pacienteVO.id, this.data);
+            this.Close();           
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)

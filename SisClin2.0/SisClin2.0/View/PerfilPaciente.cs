@@ -36,14 +36,15 @@ namespace SisClin2._0.View
             listaConsultas.ShowDialog();
         }
 
-        private void btnInfoPaciente_Click(object sender, EventArgs e)
+        private void PerfilPaciente_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void PerfilPaciente_Load(object sender, EventArgs e)
+        private void btnFinanceiro_Click(object sender, EventArgs e)
         {
-
+            MovimentacaoFinanceiraCliente mov = new MovimentacaoFinanceiraCliente(paciente.id);
+            mov.ShowDialog();
         }
 
        

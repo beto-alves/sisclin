@@ -31,7 +31,6 @@
             this.pbFotoPaciente = new System.Windows.Forms.PictureBox();
             this.btnConsultas = new System.Windows.Forms.Button();
             this.btnFinanceiro = new System.Windows.Forms.Button();
-            this.btnInfoPaciente = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoPaciente)).BeginInit();
             this.SuspendLayout();
@@ -63,16 +62,7 @@
             this.btnFinanceiro.TabIndex = 4;
             this.btnFinanceiro.Text = "Histórico Financeiros";
             this.btnFinanceiro.UseVisualStyleBackColor = true;
-            // 
-            // btnInfoPaciente
-            // 
-            this.btnInfoPaciente.Location = new System.Drawing.Point(298, 389);
-            this.btnInfoPaciente.Name = "btnInfoPaciente";
-            this.btnInfoPaciente.Size = new System.Drawing.Size(187, 30);
-            this.btnInfoPaciente.TabIndex = 5;
-            this.btnInfoPaciente.Text = "Visualizar Informações";
-            this.btnInfoPaciente.UseVisualStyleBackColor = true;
-            this.btnInfoPaciente.Click += new System.EventHandler(this.btnInfoPaciente_Click);
+            this.btnFinanceiro.Click += new System.EventHandler(this.btnFinanceiro_Click);
             // 
             // lblNome
             // 
@@ -93,7 +83,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 605);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.btnInfoPaciente);
             this.Controls.Add(this.btnFinanceiro);
             this.Controls.Add(this.btnConsultas);
             this.Controls.Add(this.pbFotoPaciente);
@@ -111,7 +100,6 @@
         private System.Windows.Forms.PictureBox pbFotoPaciente;
         private System.Windows.Forms.Button btnConsultas;
         private System.Windows.Forms.Button btnFinanceiro;
-        private System.Windows.Forms.Button btnInfoPaciente;
         private System.Windows.Forms.Label lblNome;
     }
 }

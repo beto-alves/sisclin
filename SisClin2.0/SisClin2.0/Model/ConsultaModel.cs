@@ -139,9 +139,10 @@ namespace SisClin2._0.Model
 
                     MySqlCommand cmd = new MySqlCommand(sql, conexao);
 
-                    retorno = cmd.ExecuteNonQuery();
-
+                   cmd.ExecuteNonQuery();
+                   
                     int idConsultaRealizada = (int)cmd.LastInsertedId;
+                    retorno = idConsultaRealizada;
 
                     if (consulta.procedimentos != null)
                     {

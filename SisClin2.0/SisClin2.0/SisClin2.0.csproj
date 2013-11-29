@@ -53,10 +53,13 @@
     <Reference Include="AForge.Video.DirectShow">
       <HintPath>C:\Users\Beto\Documents\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=5.2.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,11 +73,13 @@
     <Compile Include="Controller\Auxiliar.cs" />
     <Compile Include="Controller\ConsultaController.cs" />
     <Compile Include="Controller\FuncionarioController.cs" />
+    <Compile Include="Controller\MovimentacaoController.cs" />
     <Compile Include="Controller\PacienteController.cs" />
     <Compile Include="Controller\ProcedimentoController.cs" />
     <Compile Include="Model\ConsultaModel.cs" />
     <Compile Include="Model\DaoMySQL.cs" />
     <Compile Include="Model\FuncionarioModel.cs" />
+    <Compile Include="Model\MovimentacaoModel.cs" />
     <Compile Include="Model\PacienteModel.cs" />
     <Compile Include="Model\ProcedimentoModel.cs" />
     <Compile Include="Program.cs" />
@@ -115,6 +120,12 @@
     <Compile Include="View\ListaProcedimento.Designer.cs">
       <DependentUpon>ListaProcedimento.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\MovimentacaoFinanceiraCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MovimentacaoFinanceiraCliente.Designer.cs">
+      <DependentUpon>MovimentacaoFinanceiraCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\PerfilPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +162,12 @@
     <Compile Include="View\RealizarConsulta.Designer.cs">
       <DependentUpon>RealizarConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\RealizarPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RealizarPagamento.Designer.cs">
+      <DependentUpon>RealizarPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vo\AgendaVO.cs" />
     <Compile Include="Vo\ConsultaVO.cs" />
     <Compile Include="Vo\FuncionarioVO.cs" />
@@ -185,6 +202,9 @@
     <EmbeddedResource Include="View\ListaProcedimento.resx">
       <DependentUpon>ListaProcedimento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\MovimentacaoFinanceiraCliente.resx">
+      <DependentUpon>MovimentacaoFinanceiraCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\PerfilPaciente.resx">
       <DependentUpon>PerfilPaciente.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\RealizarConsulta.resx">
       <DependentUpon>RealizarConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RealizarPagamento.resx">
+      <DependentUpon>RealizarPagamento.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
